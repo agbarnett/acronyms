@@ -1,0 +1,296 @@
+---
+title: "Summary statistics for acronyms analysis"
+author: "Adrian Barnett"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE, error=FALSE, comment='', dpi=400)
+options(width=1000) # Wide pages
+options(scipen=999) # avoid scientific presentation
+# handy functions
+Missing = function(x) base::sum(is.na(x))
+Mean = function(x) base::mean(x, na.rm=TRUE)
+Median = function(x) stats::quantile(x, probs=0.5, na.rm=TRUE)
+Q1 = function(x) stats::quantile(x, probs=0.25, na.rm=TRUE)
+Q3 = function(x) stats::quantile(x, probs=0.75, na.rm=TRUE)
+Min = function(x) base::min(x, na.rm=TRUE)
+Max = function(x) base::max(x, na.rm=TRUE)
+Sum = function(x) base::sum(x, na.rm=TRUE)
+SD = function(x) stats::sd(x, na.rm=TRUE)
+N = function(x) base::length(x)
+# libraries
+library(summarytools) # for simple summaries; and set up global
+st_options(plain.ascii = FALSE,          # This is a must in Rmd documents
+            style = "rmarkdown",          # idem
+            freq.cumul=FALSE,  # do not report cumulative numbers
+            freq.report.nas = FALSE, # do not report NAs
+            round.digits = 1,
+            headings=FALSE, # do not have headings before table
+            dfSummary.varnumbers = FALSE, # This keeps results narrow enough
+            dfSummary.valid.col = FALSE)  # idemlibrary(dplyr)
+library(pander)
+panderOptions('table.emphasize.rownames', FALSE)
+panderOptions('keep.trailing.zeros', TRUE)
+panderOptions('table.split.table', Inf)
+panderOptions('table.split.cells', Inf)
+panderOptions('big.mark', ',')
+library(dplyr)
+library(ggplot2)
+g.theme = theme_bw() + theme(panel.grid.minor = element_blank())
+cbPalette = c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+# function to round with trailing zeros
+roundz  = function(x, digits=0){formatC( round( x, digits ), format='f', digits=digits)}
+
+source('99_make_analysis_data.R') # function that creates `for.model` depending on the acronym size
+## get the data
+load('data/for.analysis.RData') # from 2_concatenate_processed_data.R
+
+## temporary - random sample to reduce computation
+temporary = TRUE
+if (temporary==TRUE){
+  samp = sample(titles$pmid, size=20000, replace=FALSE)
+  titles = filter(titles, pmid %in% samp)
+  acronyms.in.titles = filter(acronyms.in.titles, pmid %in% samp)
+  excluded = sample_n(excluded, size=12000)
+  numbers.to.read = sample(1:1015, size=20, replace = FALSE) # reduce data used below
+}
+```
+
+This document contains summary statistics for our analysis of the use of acronyms over time in papers published on _PubMed_. There were `r format(nrow(titles), big.mark=',')` papers in total.
+
+## Excluded papers
+
+### Reasons for exclusion
+
+```{r flow}
+## Excluded
+# a) loop through raw files to get numbers excluded because of language
+overall = NULL
+for (number in numbers.to.read){
+  infile = paste('raw/unprocessed.pubmed.', number, '.RData', sep='')
+  load(infile)
+  remove(raw_pubmed) # tidy up
+  overall = bind_rows(overall, numbers)
+}
+sums = summarise(overall, 
+                  N = sum(start), # currently the same, so none lost to initial processing
+                  PostEnglish = sum(post.non.english),
+                  Lost = N - PostEnglish,
+                  Lost.percent = round(100*(Lost/N)))
+sframe = data.frame(reason = 'Non-English', count = sums$Lost, stringsAsFactors = FALSE)
+# b) now get other exclusions
+tab = mutate(excluded, reason = ifelse(reason == 'Title in capitals (subtitle, start)',"Title in capitals", reason), # combine "title in capitals"
+                      reason = ifelse(reason == 'Title in capitals (subtitle, end)', "Title in capitals", reason)) %>%
+  group_by(reason) %>%
+  summarise(count = n()) %>%
+  ungroup()
+# combine reasons and tabulate
+tab = bind_rows(tab, sframe) %>%
+  arrange(-count)
+pander(tab, style='simple')
+```
+
+Papers were excluded if they were not written in English, and this was the main exclusion reason.
+Short titles were those with just one word. 
+Duplicate means the same PMID number. 
+
+### Excluded numbers by year
+
+```{r excluded.year, fig.width=15, fig.height=8}
+to.plot = mutate(excluded, year=as.numeric(format(date, '%Y'))) %>%
+  group_by(year, reason) %>%
+  summarise(count = n()) %>%
+  ungroup()
+eplot = ggplot(data=to.plot, aes(x=year, y=count, col=factor(reason)))+
+  geom_line(size=1.1)+
+  scale_color_manual('Reason', values = cbPalette)+
+  ylab('Numbers excluded')+
+  xlab('Yes')+
+  coord_cartesian(ylim=c(0, 6000))+ 
+  g.theme+
+  theme(legend.position = c(0.2,0.7))
+eplot
+# for text:
+maxc = arrange(to.plot, -count) %>% slice(1)
+```
+
+One result is truncated from the plot because there was `r format(max(maxc$count),big.mark=',')` titles in capitals in a file in the year `r floor(maxc$year)`.
+
+## Publication dates
+
+The plot below shows the cumulative proportion of papers over time.
+
+```{r dates}
+dplot = ggplot(data=titles, aes(date)) + 
+  stat_ecdf(geom = "step", col='dark red', lwd=1.1)+
+  ylab('Cumulative proportion')+
+  xlab('Date')+
+  g.theme
+dplot
+```
+
+## Title length
+
+The frequency table summarises the length of the title in words.
+
+```{r title.length.table, style='asis'}
+# group title lengths
+titles = mutate(titles, 
+                n.words.g = case_when(
+                  n.words <= 5 ~ 1,
+                  n.words > 5 & n.words <= 10 ~ 2,
+                  n.words > 10 & n.words <= 15 ~ 3,
+                  n.words > 15 & n.words <= 20 ~ 4,
+                  n.words > 20 & n.words <= 25 ~ 5,
+                  n.words > 25 ~ 6
+                ),
+                n.words.g = factor(n.words.g, levels=1:6, labels=c('2-5', '6-10', '11-15', '16-20', '21-25', '26+')))
+freq(titles$n.words.g)
+```
+
+The median title length was `r median(titles$n.words)` words, with an inter-quartile range from `r Q1(titles$n.words)` to `r Q3(titles$n.words)` words. The shortest title length was `r min(titles$n.words)` words and the longest was `r max(titles$n.words)` words.
+
+### Histogram of title length
+
+```{r title.length.plot}
+tab = data.frame(table(titles$n.words.g))
+hplot = ggplot(data=tab, aes(x=Var1, y=Freq))+
+  geom_histogram(stat='identity', fill='sky blue')+
+  xlab('Number of words in the title')+
+  ylab('Frequency')+
+  g.theme
+hplot
+```
+
+## Number of authors per paper
+
+```{r authors.per.paper}
+# truncate author numbers at 10
+titles = mutate(titles, 
+                n.authors.c = ifelse(n.authors >= 10, 10, n.authors),
+                n.authors.c = factor(n.authors.c, levels=0:10, labels=c(0:9, '10+')))
+freq(titles$n.authors.c)
+```
+
+The median number of authors was `r median(titles$n.authors)` authors, with an inter-quartile range from `r Q1(titles$n.authors)` to `r Q3(titles$n.authors)` authors The smallest number of authors was `r min(titles$n.authors)` and the largest was `r max(titles$n.authors)`. 
+Some papers had no authors listed (e.g., PMID = 31452547).
+
+### Histogram of the number of authors per paper
+
+```{r authors.per.paper.histogram}
+tab = data.frame(table(titles$n.authors.c))
+hplot = ggplot(data=tab, aes(x=Var1, y=Freq))+
+  geom_histogram(stat='identity', fill='sky blue')+
+  xlab('Number of authors')+
+  ylab('Frequency')+
+  g.theme
+hplot
+```
+
+## Acronym length
+
+```{r acronym.length}
+freq(acronyms.in.titles$nchar)
+```
+
+The median acronym length was `r median(acronyms.in.titles$nchar)` characters, with an inter-quartile range from `r Q1(acronyms.in.titles$nchar)` to `r Q3(acronyms.in.titles$nchar)` characters. The shortest acronym was `r min(acronyms.in.titles$nchar)` characters and the longest was `r max(acronyms.in.titles$nchar)` characters.
+
+### Histogram of acronym length
+
+```{r acronym.length.histogram}
+# split by types of acronym
+tab = data.frame(table(acronyms.in.titles$nchar))
+hplot = ggplot(data=tab, aes(x=Var1, y=Freq))+
+  geom_histogram(stat='identity', fill='sky blue')+
+  xlab('Acronym length (characters)')+
+  ylab('Frequency')+
+  g.theme
+hplot
+```
+
+## Number of acronyms per paper
+
+```{r acronyms.per.paper}
+pmid.with = unique(acronyms.in.titles$pmid) # number of papers with at least one acronym 
+n.without = nrow(titles) - length(pmid.with) # number without an acronym
+# stats for papers with an abstract
+counts = group_by(acronyms.in.titles, pmid) %>%
+   summarise(n = n()) %>%
+   ungroup() %>%
+   mutate(n = ifelse(n >= 5, 5, n), # truncate n to five
+          nc = factor(n, levels=0:5, labels=c(0:4, '5+'))) 
+# add zeros to counts
+zeros = data.frame(pmid=999, n=rep(0, n.without)) %>%
+   mutate(nc = factor(n, levels=0:5, labels=c(0:4, '5+'))) 
+counts = bind_rows(counts, zeros)
+freq(counts$nc)
+# percent of abstracts with no acronyms
+percent.none = round(100 * sum(counts$n==0) / nrow(counts))
+```
+
+There were `r percent.none`% of papers with no acronyms in the title.
+
+### Histogram of the number of acronyms per paper
+
+```{r counts.per.paper.histogram}
+# split by types of acronym
+hplot = ggplot(data=counts, aes(x=nc))+
+  geom_histogram(stat='count', fill='sky blue')+
+  xlab('Number of acronyms')+
+  ylab('Frequency')+
+  g.theme
+hplot
+```
+
+## Number of papers without an abstract
+
+The table below shows the number of papers that had no abstract.
+
+```{r no.abstract}
+```
+
+## Article type
+
+```{r article.type}
+tab = group_by(titles, type) %>% 
+  summarise(n = n()) %>%
+  ungroup() %>%
+  arrange(-n) %>%
+  mutate(percent = roundz(100*n / sum(n), 1))
+pander(tab, style='simple')
+```
+
+Most papers were journal articles.
+
+## Number of papers per journal
+
+```{r papers.per.journal}
+counts = group_by(titles, jabbrv) %>%
+   summarise(n = n()) %>%
+   ungroup() %>% 
+   mutate(ng = case_when(
+          n <= 10 ~ 1,
+          n > 10 & n <= 20 ~ 2,
+          n > 20 & n <= 30 ~ 3,
+          n > 30 & n <= 40 ~ 4,
+          n > 40 & n <= 50 ~ 5,
+          n > 50 ~ 6
+      ),
+    ng = factor(ng, levels=1:6, labels=c('1-10', '11-20', '20-30', '30-40', '40-50', '51+')))
+freq(counts$ng)
+```
+
+## Top ten journals
+
+These are the top ten journals included in the analysis.
+
+```{r top.ten}
+top.five = arrange(counts, -n) %>%
+  slice(1:10) %>%
+  select(-ng) %>%
+  rename('Journal abbreviation'='jabbrv')
+pander(top.five, style='simple')
+```
+
