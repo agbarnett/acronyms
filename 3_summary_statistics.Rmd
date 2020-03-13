@@ -20,6 +20,8 @@ Max = function(x) base::max(x, na.rm=TRUE)
 Sum = function(x) base::sum(x, na.rm=TRUE)
 SD = function(x) stats::sd(x, na.rm=TRUE)
 N = function(x) base::length(x)
+# function to round with trailing zeros
+roundz  = function(x, digits=0){formatC( round( x, digits ), format='f', digits=digits)}
 # libraries
 library(summarytools) # for simple summaries; and set up global
 st_options(plain.ascii = FALSE,          # This is a must in Rmd documents
@@ -40,20 +42,20 @@ library(dplyr)
 library(ggplot2)
 g.theme = theme_bw() + theme(panel.grid.minor = element_blank())
 cbPalette = c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
-# function to round with trailing zeros
-roundz  = function(x, digits=0){formatC( round( x, digits ), format='f', digits=digits)}
 
 source('99_make_analysis_data.R') # function that creates `for.model` depending on the acronym size
 ## get the data
 load('data/for.analysis.RData') # from 2_concatenate_processed_data.R
 
 ## temporary - random sample to reduce computation
-temporary = TRUE
+temporary = FALSE
+numbers.to.read = 1:1015
 if (temporary==TRUE){
   samp = sample(titles$pmid, size=20000, replace=FALSE)
   titles = filter(titles, pmid %in% samp)
-  acronyms.in.titles = filter(acronyms.in.titles, pmid %in% samp)
-  excluded = sample_n(excluded, size=12000)
+  acronyms = filter(acronyms, pmid %in% samp)
+  excluded.abstracts = sample_n(excluded.abstracts, size=12000)
+  excluded.titles = sample_n(excluded.titles, size=12000)
   numbers.to.read = sample(1:1015, size=20, replace = FALSE) # reduce data used below
 }
 ```
@@ -81,7 +83,7 @@ sums = summarise(overall,
                   Lost.percent = round(100*(Lost/N)))
 sframe = data.frame(reason = 'Non-English', count = sums$Lost, stringsAsFactors = FALSE)
 # b) now get other exclusions
-tab = mutate(excluded, reason = ifelse(reason == 'Title in capitals (subtitle, start)',"Title in capitals", reason), # combine "title in capitals"
+tab = mutate(excluded.titles, reason = ifelse(reason == 'Title in capitals (subtitle, start)',"Title in capitals", reason), # combine "title in capitals"
                       reason = ifelse(reason == 'Title in capitals (subtitle, end)', "Title in capitals", reason)) %>%
   group_by(reason) %>%
   summarise(count = n()) %>%
@@ -98,8 +100,10 @@ Duplicate means the same PMID number.
 
 ### Excluded numbers by year
 
-```{r excluded.year, fig.width=15, fig.height=8}
-to.plot = mutate(excluded, year=as.numeric(format(date, '%Y'))) %>%
+#### a) titles
+
+```{r excluded.year.titles, fig.width=15, fig.height=8}
+to.plot = mutate(excluded.titles, year=as.numeric(format(date, '%Y'))) %>%
   group_by(year, reason) %>%
   summarise(count = n()) %>%
   ungroup()
@@ -191,46 +195,100 @@ hplot
 
 ## Acronym length
 
-```{r acronym.length}
-freq(acronyms.in.titles$nchar)
-```
+#### a) In titles 
 
-The median acronym length was `r median(acronyms.in.titles$nchar)` characters, with an inter-quartile range from `r Q1(acronyms.in.titles$nchar)` to `r Q3(acronyms.in.titles$nchar)` characters. The shortest acronym was `r min(acronyms.in.titles$nchar)` characters and the longest was `r max(acronyms.in.titles$nchar)` characters.
+```{r acronym.length.titles}
+to.table = filter(acronyms, source=='Title')
+freq(to.table$nchar)
+```
+The median acronym length was `r median(to.table$nchar)` characters, with an inter-quartile range from `r Q1(to.table$nchar)` to `r Q3(to.table$nchar)` characters. 
+The shortest acronym was `r min(to.table$nchar)` characters and the longest was `r max(to.table$nchar)` characters.
+
+#### b) In abstracts 
+
+```{r acronym.length.abstracts}
+to.table = filter(acronyms, source=='Abstract')
+freq(to.table$nchar)
+```
+The median acronym length was `r median(to.table$nchar)` characters, with an inter-quartile range from `r Q1(to.table$nchar)` to `r Q3(to.table$nchar)` characters. 
+The shortest acronym was `r min(to.table$nchar)` characters and the longest was `r max(to.table$nchar)` characters.
+
 
 ### Histogram of acronym length
 
 ```{r acronym.length.histogram}
 # split by types of acronym
-tab = data.frame(table(acronyms.in.titles$nchar))
-hplot = ggplot(data=tab, aes(x=Var1, y=Freq))+
+tab = group_by(acronyms, source, nchar) %>%
+	summarise(count = n() / 1000000) %>% # per million
+	ungroup()
+hplot = ggplot(data=tab, aes(x=nchar, y=count))+
   geom_histogram(stat='identity', fill='sky blue')+
   xlab('Acronym length (characters)')+
-  ylab('Frequency')+
-  g.theme
+  ylab("Frequency (millions)")+
+  g.theme+
+  facet_wrap(~source, scales='free_y')
 hplot
+# means
+```
+
+### Boxplot of acronym length
+
+```{r acronym.length.histogram}
+# split by types of acronym
+bplot = ggplot(data=acronyms, aes(x=source, y=nchar))+
+  geom_boxplot()+
+  xlab('')
+  ylab('Acronym length (characters)')+
+  g.theme
+bplot
 ```
 
 ## Number of acronyms per paper
 
-```{r acronyms.per.paper}
-pmid.with = unique(acronyms.in.titles$pmid) # number of papers with at least one acronym 
-n.without = nrow(titles) - length(pmid.with) # number without an acronym
+```{r acronyms.per.paper, include=FALSE}
+## numbers without an acronym
+# a) titles 
+pmid.with.title = unique(filter(acronyms, source=='Title')$pmid) # number of papers with at least one acronym 
+n.without.titles = nrow(titles) - length(pmid.with.title) # number without an acronym
+# b) abstracts
+pmid.with.abstract = unique(filter(acronyms, source=='Abstract')$pmid) # number of papers with at least one acronym 
+n.without.abstracts = nrow(filter(titles,!is.na(n.words.abstract))) - length(pmid.with.abstract) # number without an acronym
 # stats for papers with an abstract
-counts = group_by(acronyms.in.titles, pmid) %>%
+counts = group_by(acronyms, pmid, source) %>%
    summarise(n = n()) %>%
    ungroup() %>%
    mutate(n = ifelse(n >= 5, 5, n), # truncate n to five
           nc = factor(n, levels=0:5, labels=c(0:4, '5+'))) 
 # add zeros to counts
-zeros = data.frame(pmid=999, n=rep(0, n.without)) %>%
+zeros.titles = data.frame(pmid=999, source='Title', n=rep(0, n.without.titles)) %>%
    mutate(nc = factor(n, levels=0:5, labels=c(0:4, '5+'))) 
-counts = bind_rows(counts, zeros)
-freq(counts$nc)
+zeros.abstracts = data.frame(pmid=999, source='Abstract', n=rep(0, n.without.abstracts)) %>%
+   mutate(nc = factor(n, levels=0:5, labels=c(0:4, '5+'))) 
+counts = bind_rows(counts, zeros.titles, zeros.abstracts)
+```
+
+#### a) Titles
+
+```{r without.titles}
+to.freq = filter(counts, source=='Title')
+freq(to.freq$nc)
 # percent of abstracts with no acronyms
-percent.none = round(100 * sum(counts$n==0) / nrow(counts))
+percent.none = round(100 * sum(to.freq$n==0) / nrow(to.freq))
 ```
 
 There were `r percent.none`% of papers with no acronyms in the title.
+
+#### b) Abstracts
+
+```{r without.abstracts}
+to.freq = filter(counts, source=='Abstract')
+freq(to.freq$nc)
+# percent of abstracts with no acronyms
+percent.none = round(100 * sum(to.freq$n==0) / nrow(to.freq))
+```
+
+There were `r percent.none`% of papers with no acronyms in the abstract.
+
 
 ### Histogram of the number of acronyms per paper
 
@@ -240,7 +298,8 @@ hplot = ggplot(data=counts, aes(x=nc))+
   geom_histogram(stat='count', fill='sky blue')+
   xlab('Number of acronyms')+
   ylab('Frequency')+
-  g.theme
+  g.theme+
+  facet_wrap(~source, scales='free_y')
 hplot
 ```
 
@@ -249,6 +308,10 @@ hplot
 The table below shows the number of papers that had no abstract.
 
 ```{r no.abstract}
+titles = mutate(titles,
+                no.abstract = as.numeric(is.na(n.words.abstract)),
+                no.abstract = factor(no.abstract, levels=0:1, labels=c('Abstract','No abstract')))
+freq(titles$no.abstract)
 ```
 
 ## Article type

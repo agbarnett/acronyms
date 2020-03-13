@@ -1,15 +1,17 @@
 # 99_check_one_pubmed.R
 # check one result, used to verify how the main function is working
-# January 2020
+# March 2020
 library(stringr)
 library(dplyr)
+library(Unicode)
 source('99_remove_dots.R') # to remove full-stops within acronyms
 source('99_main_function_title.R') # main function for titles
 source('99_main_function_abstract.R') # main function for abstracts
 load('data/pubmed_list.RData') # id.list from 1_make_pubmed_list.R
 
 # pubmed id to check
-to.check = 28332655
+to.check = 21104123
+
 # find this pubmed ID in big list of files
 which.number = filter(id.list, pmid==to.check) 
 
@@ -27,5 +29,4 @@ if(is.na(raw_pubmed$abstract[k]) ==FALSE){
   aresults = abstract_acronyms(indata=raw_pubmed, k=k) # 
 }
 aresults
-
 
