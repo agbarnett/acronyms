@@ -38,6 +38,10 @@ math.unicode <- as.u_char_range(c("0391..03FF", # from Unicode library; math sym
                                   'F8FF',
                                   'F8FE',
                                   '2019',
+                                  '0080..00FF', # latin supplement
+                                  '20A0..20CF', # currency
+                                  '2029', # paragraph separator
+                                  '0001', # start of header
                                   "2300..23FF", # Miscellaneous Technical
                                   "0250..02AF", # IPA extensions
                                   '3000..303F', # CJK Symbols and Punctuation
@@ -52,11 +56,12 @@ math.unicode <- as.u_char_range(c("0391..03FF", # from Unicode library; math sym
                                   '2122', # trademarks
                                   '00A9',
                                   '00AE',
+                                  '02B0..02FF', # Spacing Modifier Letters
                                   '02BC', # backwards apostrophe
                                   "2190..21FF")) # arrows
 codes = u_char_inspect(math.unicode) %>%
   filter(!is.na(Name)) # remove a few missing rows
-other.math.symbols = unique(codes$Char)
+other.math.symbols = unique(codes$Char) # remove duplicates
 other.math.symbols = paste(other.math.symbols, collapse = '|', sep='')
 
 ## things to replace in titles and abstracts before counting acronyms
@@ -75,7 +80,7 @@ bogus.acronyms.title = paste(bogus.acronyms.title, collapse='|')
 # remove punctuation, can't use [:punct:] because it includes & and we want to keep that, e.g. for "AT&T"
 # decided to remove + because of things like 28517515[pmid] and 28516485[pmid]; added narrow hyphen 
 narrow.hyphen = Unicode::u_char_inspect(Unicode::as.u_char('2011'))$Char # e.g, 31524255[pmid]
-punctuation = unique(c('!',"'",'"','#','%','(',')','*',',','-','.',"\\",'/',':',';','<','=','═','>','?','@','[','/',']','^','_','{','|','}','~','$',"`",'+','•','Â','?','?','°','±','×','²','¼','½','¾','–','-','…', narrow.hyphen))
+punctuation = unique(c("!","‴","'",'"',"#","%","(",")","*",",","-",".","\\","/",":",";","<","=","═",">","?","@","[","/","]","^","_","{","|","}","~","′","$","‰","¬","÷","†","‡","“","”","�","（","）","＋","│","£","¢","➔","⁃","æ","ᇞ","⫽","⁎","＊","`","ـ","+","②","③","④","⑤","•","Â","?","?","°","±","×","²","¿","«","＞","＜","⩽","⩾","″","¼","½","¾","–","-","…", narrow.hyphen))    
 punctuation = paste(paste('\\', punctuation, sep=''), collapse='|')
 
 ## Section 2: function ##
@@ -87,12 +92,16 @@ to.return$exclude = FALSE
 # extract title
 title = indata$title[k]
 title = str_replace_all(title, pattern=to.replace, replacement = ' ') # remove fractions, superscripts, etc; use space so that sub/super-script and word are separated
-title = str_replace_all(title, pattern=bogus.acronyms.title, replacement='dummy') # Replaced with 'dummy' so that word count is not effected
+title = str_replace_all(title, pattern=bogus.acronyms.title, replacement='DUMMYDUMMY') # Replaced with 'DUMMYDUMMY' so that word count is not effected and so that capital rules work later
 title = str_remove_dots(title)  # remove full-stops in acronyms
 title = str_replace_all(string=title, pattern="-[0-9]* |-[0-9]*$", replacement=' ') # remove numbers after a hyphen (e.g., 21745015[pmid]); keep numbers without a hyphen because these are often real words
 title = str_replace_all(string=title, pattern=" [0-9]*raw-|^[0-9]*-", replacement=' ') # remove numbers before a hyphen (e.g., 21744858[pmid])
 title = str_replace_all(title, pattern=punctuation, replacement = ' ') # replace all punctuation as it just gets in the way - need to do after contracting dots
 title = str_replace_all(title, pattern='\\.\\.\\.', replacement = '~') # replace '...' with '~' so it does not get counted as an acronym, e.g. 15299935
+title = str_replace_all(title, pattern='s ', replacement = ' ') # replace plurals, as this helps with later rules about what is an acronym
+# two very common replacements that don't fit rules
+title = str_replace_all(title, pattern='MicroRNA', replacement = 'MiRNA')
+title = str_replace_all(title, pattern='ATPase', replacement = 'ATP')
 # remove symbols, do not add to word count
 title = str_replace_all(title, pattern=symbols, replacement = ' ')
 title = str_replace_all(title, pattern=other.math.symbols, replacement = ' ')
@@ -147,8 +156,7 @@ if(all.caps[1] == TRUE & nchar(words)[1] > 6 ){
 if(all.caps[1] == TRUE & all.caps[2] == TRUE & max(nchar(words)[1:2]) > 6 ){words[1:2] = 'dummy'}
 
 ## further processing
-# words = str_remove_all(string=words, pattern="\\b[0-9]+\\b") # remove words that are all numbers 
-# words = str_remove_all(string=words, pattern="\\w*[0-9]+\\w*\\s*") # remove words that are all numbers or a mix of words and numbers
+words = str_replace_all(string=words, pattern='DUMMYDUMMY', replacement='dummy') # replace capital dummy
 words = str_replace_all(string=words, pattern=roman.numerals, replacement='dummy') # replace Roman numerals (see above); Replaced with 'dummy' so that word count is not effected
 words = str_replace_all(string=words, pattern=roman.numerals.th, replacement='dummy') # replace Roman numerals with 'th' (see above); Replaced with 'dummy' so that word count is not effected
 words = str_replace_all(string=words, pattern=roman.numerals.letters, replacement='dummy') # replace Roman numerals with letters (see above); Replaced with 'dummy' so that word count is not effected
@@ -170,8 +178,8 @@ words.length = nchar(words) # length of each word
 nwords = nchar(str_remove_all(string=words, pattern='[^0-9]')) # number of numbers
 lwords = nchar(str_remove_all(string=words, pattern='[^a-z]')) # number of lower case letters
 uwords = nchar(str_remove_all(string=words, pattern='[^A-Z]')) # number of upper case letters
-# acronym if more upper case than lower and numbers combined
-acronym.match = ((uwords > (lwords+nwords)) & uwords>=2)  | words=='H1N1' # added H1N1 as specific and common rule break
+# acronym if upper case >= lower and numbers combined
+acronym.match = ((uwords >= (lwords+nwords)) & uwords>=2) 
 
 # previous
 #acronym.match.2 = (uwords==2) & (words.length == 2) # two letters, both upper case

@@ -1,7 +1,8 @@
 # 0_read_pubmed_xml.R
 # get all pubmed data from web; takes a while
 # pubmed XML files are here ftp://ftp.ncbi.nlm.nih.gov/pubmed/baseline
-# January 2020
+# for testing can use small file = 'testXml/test.xml' (others in same folder)
+# April 2020
 library(XML)
 library(dplyr)
 library(stringr)
@@ -12,12 +13,12 @@ source('99_table_articles_byAuth_adapted.R') # use my adapted versions of this c
 source('99_article_to_df_adapted.R') # faster without author data
 # see https://cran.r-project.org/web/packages/easyPubMed/vignettes/getting_started_with_easyPubMed.html
 
-# for testing can use small file = 'test.xml'
-
 # download NLM file from web
 # numbers from 1 to 1015
-#numbers.to.loop = c(1,100,200,300,400,500,600,700,800,900) # points in time
-numbers.to.loop = 992:1015 # all of them!
+#numbers.to.loop = round(seq(1, 1014, length.out = 20)) # selected points in time, useful for an initial run
+#set.seed(12345); numbers.to.loop = sample(1:1014, replace=FALSE, size=10) # random points in time
+numbers.to.loop = 979:1015 # all of them!
+#numbers.to.loop = 1010:1015 # update most recent files
 for (number in numbers.to.loop){ 
 file = paste("pubmed20n", sprintf("%04d", number), ".xml", sep='') # number with leading zeros
 filez = paste(file, ".gz", sep='') # zipped version of filename
@@ -26,7 +27,6 @@ zipped.file = download.file(url = url, destfile=filez) # read pubmed files from 
 gunzip(filez) # unzip
 # import the XML file into R - takes a while
 very_raw_pubmed <- table_articles_byAuth_adapted(pubmed_data = file, # from 99_table_articles_byAuth_adapted.R
-  max_chars = -1, # max chars from abstract (given negative value to capture everything); if abstract is NA it means there wasn't one
   encoding = "UTF-8") # recommended encoding
 start.N = very_raw_pubmed$N # store starting number of papers
 very_raw_pubmed = very_raw_pubmed$papers.authors.df # reuse old data name
@@ -47,7 +47,7 @@ raw_pubmed = mutate(very_raw_pubmed,
   title = str_remove(string=title, pattern='[:punct:]$'), # remove punctuation at end of title
   title = str_remove(string=title, pattern='\\] $|^\\[|\\]$') # remove square brackets around title
 ) %>% 
-  dplyr::select(pmid, language, n.authors, jabbrv, type, date, title, abstract) # reduce the number of variables
+  dplyr::select(pmid, language, n.authors, first.author, jabbrv, type, date, title, abstract) # reduce the number of variables
 
 ## Paper numbers throughout the data management process
 # lost in processing - none, so don't need

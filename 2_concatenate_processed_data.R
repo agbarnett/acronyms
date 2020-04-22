@@ -80,6 +80,7 @@ ex.duplicates = filter(titles, pmid %in% to.remove) %>%
   ungroup()
 excluded.titles = bind_rows(excluded.titles, ex.duplicates)
 titles = filter(titles, !pmid %in% to.remove) # remove from data
+acronyms = filter(acronyms, !pmid %in% to.remove) # remove from data
 # b) abstracts
 dups = duplicated(abstracts$pmid)
 n.duplicates = sum(dups)
@@ -92,6 +93,7 @@ ex.duplicates = filter(abstracts, pmid %in% to.remove) %>%
   mutate(reason = 'Duplicate') %>%
   ungroup()
 excluded.abstracts = bind_rows(excluded.abstracts, ex.duplicates)
+abstracts = filter(abstracts, !pmid %in% to.remove) # remove from data
 acronyms = filter(acronyms, !pmid %in% to.remove) # remove from data
 
 ## remove empty document types
@@ -102,21 +104,17 @@ excluded.titles = bind_rows(excluded.titles, no.type)
 # now remove from data
 to.remove = no.type$pmid
 titles = filter(titles, !pmid %in% to.remove) 
+abstracts = filter(abstracts, !pmid %in% to.remove) 
 acronyms = filter(acronyms, !pmid %in% to.remove) 
-
-## combine meta-data for abstracts and titles
-titles = select(abstracts, pmid, n.words) %>%
-  rename('n.words.abstract' = 'n.words') %>%
-  right_join(titles, by='pmid') %>%
-  select(pmid, date, type, jabbrv, n.authors, n.words, n.words.abstract) # re-order variables
 
 ## combine article types
 titles = combine.types(titles)
+abstracts = combine.types(abstracts)
 excluded.titles = combine.types(excluded.titles)
 excluded.abstracts = combine.types(excluded.abstracts)
 
-## exclude abstracts of more than 16 characters (just gene strings)
+## exclude abstracts of 16 or more characters (just gene strings)
 acronyms = filter(acronyms, nchar < 16)
 
 # save
-save(titles, acronyms, excluded.titles, excluded.abstracts, file='data/for.analysis.RData')
+save(titles, abstracts, acronyms, excluded.titles, excluded.abstracts, file='data/for.analysis.RData')

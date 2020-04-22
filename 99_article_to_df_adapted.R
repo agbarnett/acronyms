@@ -3,11 +3,10 @@
 # adapted code from github, https://github.com/cran/easyPubMed
 # called by 99_table_articles_byAuth_adapted.R
 # documentation for pubmed elements is here https://dtd.nlm.nih.gov/ncbi/pubmed/doc/out/180101/index.html
-# January 2020
+# April 2020
 
 article_to_df_adapted <-
-  function(pubmedArticle, 
-           max_chars = 500) 
+  function(pubmedArticle) 
   {
     #
     options(warn = -1)
@@ -20,17 +19,10 @@ article_to_df_adapted <-
       return(NULL)
     }
     
-    # max_chars Check
-    if (!is.numeric(max_chars)) {
-      max_chars <- 500
-    } else if (max_chars < 0) {
-      max_chars <- -1  
-    }
-    
     # Get started
     tryCatch({
       
-      tmp.article <- custom_grep(xml_data = pubmedArticle, tag = "PubmedArticle", format = "char")
+      tmp.article <- custom_grep(xml_data = pubmedArticle, tag = "PubmedArticle", format = "char") # extract the article
       if (is.null(tmp.article)) 
       {
         message("An error occurred")
@@ -54,6 +46,14 @@ article_to_df_adapted <-
       # number of authors
       n.authors = str_count(string=tmp.article, pattern="\\<\\/Author\\>")
       
+      # first author's surname
+      first.author = ''
+      if(n.authors > 0){
+        tmp.author <- custom_grep(xml_data = tmp.article, tag = "Author", format = "char")
+        tmp.last <- custom_grep(xml_data = tmp.author, tag = "LastName", format = "char")
+        first.author = ifelse(is.null(tmp.last)==TRUE, '', tmp.last)
+      }
+      
       # Title
       tmp.title <- custom_grep(xml_data = tmp.article, tag = "ArticleTitle", format = "char")
       if (length(tmp.title) > 1){
@@ -68,7 +68,7 @@ article_to_df_adapted <-
         }
       }
       
-      # Language, only want English, will exclude later
+      # Language, only want English (is excluded later so we can see numbers)
       # had to use my own search because "Language" was being picked up in abstract ...
       # ... specific code not working: tmp.language <- custom_grep(xml_data = tmp.article, tag = "Language", format = "char")
       language.loc = str_locate_all(pattern='\\<Language\\>', tmp.article)
@@ -77,43 +77,58 @@ article_to_df_adapted <-
       if(nchar(tmp.language)!=3){tmp.language = 'Missing'}
 
       ## Abstract & Copyright
-      # first remove <OtherAbstract>, which can be abstract in another language
+      # remove <OtherAbstract>, which can be abstract in another language - had to do whilst still in XML format
       abstract.other.location.start <- str_locate_all(tmp.article, pattern='\\<OtherAbstract')[[1]]
-      if(length(abstract.other.location.start)>0){
-          n.other = nrow(abstract.other.location.start)
-          abstract.other.location.end <- str_locate_all(tmp.article, pattern='\\<\\/OtherAbstract')[[1]]
-          first.string = str_sub(tmp.article, start = 1, end = abstract.other.location.start[1,1]-1)
-          last.string = str_sub(tmp.article, start = abstract.other.location.end[n.other,2], end = nchar(tmp.article))
-          tmp.article = paste(first.string, last.string) # create new article
+      if(length(abstract.other.location.start)>0 & is.na(abstract.other.location.start)[1] == FALSE){
+        n.other = nrow(abstract.other.location.start)
+        abstract.other.location.end <- str_locate_all(tmp.article, pattern='\\<\\/OtherAbstract')[[1]]
+        first.string = str_sub(tmp.article, start = 1, end = abstract.other.location.start[1,1]-1)
+        last.string = str_sub(tmp.article, start = abstract.other.location.end[n.other,2], end = nchar(tmp.article))
+        tmp.article = paste(first.string, last.string) # create new article
       }  
-      # now extract abstract
-      tmp.abstract <- custom_grep(xml_data = tmp.article, tag = "AbstractText", format = "char")
-      if (length(tmp.abstract) > 1){
-        tmp.abstract <- paste(tmp.abstract, collapse = " ", sep = " ")
+
+      # get "raw" abstract from rest of entry
+      abstract.raw = ''
+      abstract.start <- str_locate(tmp.article, pattern='\\<Abstract') # first mention
+      if(length(abstract.start)>0 & is.na(abstract.start)[1] == FALSE){
+        abstract.end = str_locate_all(tmp.article, pattern='\\<\\/Abstract')[[1]]
+        abstract.end = abstract.end[nrow(abstract.end),] # last ending
+        abstract.raw = str_sub(tmp.article, start=abstract.start[1], end=abstract.end[2]+1)
+      }  
+      
+      # remove systematic review registrations, e.g., 28320459[PMID] - test17.xml
+      abstract.registration.location.start <- str_locate(abstract.raw, pattern='SYSTEMATIC REVIEW REGISTRATION')[1]
+      if(!is.na(abstract.registration.location.start)){
+        abstract.registration.location.end = str_locate_all(abstract.raw, pattern='\\<\\/AbstractText\\>')[[1]]
+        end = min(abstract.registration.location.end[abstract.registration.location.end[,2] > abstract.registration.location.start, 2]) # find the next "/AbstractText" after the systematic review
+        first.string = str_sub(abstract.raw, start = 1, end = abstract.registration.location.start-22) # minus 22 to also remove <AbstractText>
+        last.string = str_sub(abstract.raw, start = end+1, end = nchar(abstract.raw))
+        abstract.raw = paste(first.string, last.string) # create new article
+      }  
+      
+      # remove abstract sub-headings
+      sub.headings.start <- str_locate(abstract.raw, pattern='\\<AbstractText') # find first
+      if(is.na(sub.headings.start)[1] == FALSE){ # first remove all </AbstractText> 
+        abstract.raw = str_remove_all(string=abstract.raw, pattern='\\<\\/AbstractText\\>')
+      }
+      while(is.na(sub.headings.start)[1] == FALSE){
+        first = str_sub(abstract.raw, start = 1, end = sub.headings.start[1,1]-1)
+        second = str_sub(abstract.raw, start = sub.headings.start[1,2]+1, end = nchar(abstract.raw))
+        next.ending = str_locate(second, '>') # now find the next ending (varying because of label length)
+        second = str_sub(second, next.ending[1]+1, nchar(second))
+        abstract.raw = paste(first, second)
+        sub.headings.start <- str_locate(abstract.raw, pattern='\\<AbstractText') # find next, if there is one
+      }  
+      
+      # now extract abstract and leave behind <CopyrightInformation>
+      tmp.abstract <- custom_grep(xml_data = abstract.raw, tag = "Abstract", format = "char")
+      if (is.null(tmp.abstract) == FALSE){
+        tmp.abstract <- paste(tmp.abstract, collapse = " ", sep = " ") # if it is a list
         # remove Copyright, sometimes ends up in abstract
         tmp.copyright <- custom_grep(xml_data = tmp.article, tag = "CopyrightInformation", format = "char")
         if(is.null(tmp.copyright)==FALSE){tmp.abstract = str_remove(fixed(tmp.abstract), pattern=fixed(tmp.copyright))}
-        if(max_chars >= 0) {
-          tmp.abstract <- gsub("</{0,1}i>", "", tmp.abstract, ignore.case = T)
-          tmp.abstract <- gsub("</{0,1}b>", "", tmp.abstract, ignore.case = T)
-          tmp.abstract <- gsub("</{0,1}sub>", "", tmp.abstract, ignore.case = T)
-          tmp.abstract <- gsub("</{0,1}exp>", "", tmp.abstract, ignore.case = T)
-          
-          tmp.abstract <- substr(tmp.abstract, 0, max_chars)
-        }
-      } else if (length(tmp.abstract) < 1) {
-        tmp.abstract <- NA
-      } else {
-        if(max_chars >= 0) {
-          tmp.abstract <- substr(tmp.abstract, 0, max_chars)
-          tmp.abstract <- gsub("</{0,1}i>", "", tmp.abstract, ignore.case = T)
-          tmp.abstract <- gsub("</{0,1}b>", "", tmp.abstract, ignore.case = T)
-          tmp.abstract <- gsub("</{0,1}sub>", "", tmp.abstract, ignore.case = T)
-          tmp.abstract <- gsub("</{0,1}exp>", "", tmp.abstract, ignore.case = T)
-          
-        }
-      }
-      
+      } else if (is.null(tmp.abstract) == TRUE) {tmp.abstract <- NA}
+
       ## Dates, use pubmed date
       dstart = str_locate(string=tmp.article, pattern='PubMedPubDate PubStatus="pubmed"')
       tmp.date = str_sub(string=tmp.article, start = dstart[2]+2, end=nchar(tmp.article)) # start from pubmed date so that next end of pubmed date work
@@ -146,24 +161,14 @@ article_to_df_adapted <-
       final.mat <- data.frame(pmid = tmp.PMID, 
                       language = tmp.language,
                       n.authors = n.authors,
+                      first.author = first.author,
                       title = tmp.title,
                       abstract = tmp.abstract,
                       date = date,
                       type = tmp.type,
                       jabbrv = tmp.jabbrv, stringsAsFactors = FALSE)
       
-      # Final check and return only if all elements are present
-      if (ncol(final.mat) != 8) { # number of variables
-        # export lost PMIDs
-        ofile = file('U:/Research/Projects/ihbi/aushsi/aushsi_barnetta/meta.research/text.mining/acronyms/LostPMIDs.txt', 'a') # append
-        cat(tmp.PMID, '\n', file=ofile)
-        close(ofile)
-        #
-        final.mat <- NULL
-      }
-    }, error = function(e) {NULL}, 
-    finally = {
-      options(warn = 0)
       return(final.mat)
     })
+
   }

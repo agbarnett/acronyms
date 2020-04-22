@@ -56,7 +56,7 @@ to.return$exclude = FALSE
 # process the abstract
 abstract = indata$abstract[k]
 abstract = str_replace_all(abstract, pattern=to.replace, replacement = ' ') # remove fractions, superscripts, etc; use space so that sub/super-script and word are separated
-abstract = str_replace_all(abstract, pattern=bogus.acronyms.abstract, replacement='dummy') # Replaced with 'dummy' so that word count is not effected
+abstract = str_replace_all(abstract, pattern=bogus.acronyms.abstract, replacement='DUMMYDUMMY') # Replaced with 'DUMMYDUMMY' so that word count is not effected and so that capital rules work later
 abstract = str_replace_all(abstract, pattern=numbers.to.replace, replacement=' number ') # replace numbers that are not part of other words (could replace with 'rebmun' - number backwards - so that denominator can be done with and without numbers)
 abstract = str_remove_dots(abstract)  # remove full-stops in acronyms
 abstract = str_replace_all(abstract, pattern=units, replacement = ' units ') # replace units
@@ -64,9 +64,36 @@ abstract = str_replace_all(string=abstract, pattern="-[0-9]* |-[0-9]*$", replace
 abstract = str_replace_all(string=abstract, pattern=" [0-9]*-|^[0-9]*-", replacement=' ') # remove numbers before a hyphen (e.g., 21744858[pmid])
 abstract = str_replace_all(abstract, pattern=punctuation, replacement = ' ') # replace all punctuation as it just gets in the way - need to do after contracting dots
 abstract = str_replace_all(abstract, pattern='\\.\\.\\.', replacement = '~') # replace '...' with '~' so it does not get counted as an acronym, e.g. 15299935
+abstract = str_replace_all(abstract, pattern='s ', replacement = ' ') # replace plurals, as this helps with later rules about what is an acronym
+# two very common replacements that don't fit rules
+abstract = str_replace_all(abstract, pattern='MicroRNA', replacement = 'MiRNA')
+abstract = str_replace_all(abstract, pattern='ATPase', replacement = 'ATP')
 # remove symbols, do not add to word count
 abstract = str_replace_all(abstract, pattern=symbols, replacement = ' ')
 abstract = str_replace_all(abstract, pattern=other.math.symbols, replacement = ' ')
+
+## remove citation at end of abstract (April 2020)
+# using author name does not work; combine name and jabbrv.
+find.jabbrv = str_locate_all(string=abstract, pattern=indata$jabbrv[k])[[1]] # is the first author's name in the abstract
+find.jabbrv = find.jabbrv[is.na(find.jabbrv)[,1]==FALSE, ]
+find.jabbrv = matrix(find.jabbrv, ncol=2)
+if(nrow(find.jabbrv) > 0 ){ # 
+  find.name = str_locate_all(string=abstract, pattern=paste('\\b', indata$first.author[k], '\\b', sep=''))[[1]] # is the first author's name in the abstract
+  if(nrow(find.name) > 0){ # must also have name, avoids issues for journals like 'Chest' for a journal abbreviation
+    # if name and jabbrv are at start, then assume citation is first, otherwise it must be last
+    start.cut = min(find.jabbrv[1,1], find.name[1,1])
+    end.cut = max(find.jabbrv[1,2], find.name[1,2])
+    if(start.cut > (nchar(abstract)-250) & end.cut > (nchar(abstract)-250)){ # late in text
+      abstract = stringr::str_sub(abstract, start=1, end=start.cut - 1) # assume citation is at end
+    }else{ # otherwise assume early in text
+      abstract = stringr::str_sub(abstract, start=end.cut + 1, end=nchar(abstract)) # assume citation is at start
+    }
+    # export information to a file for checking
+    check.file = file('checkAuth.txt', open='a')
+    writeLines(text=as.character(indata$pmid[k]), check.file)
+    close(check.file)
+  }
+}
 
 ## break the abstract into words
 words = str_split(string=abstract, pattern=' ')[[1]]
@@ -108,6 +135,7 @@ if(line.of.four == TRUE){
 if(all.caps[1] == TRUE & nchar(words)[1] > 6 ){words[1]='dummy'}
 
 ## further processing
+words = str_replace_all(string=words, pattern='DUMMYDUMMY', replacement='dummy') # replace capital dummy
 words = str_replace_all(string=words, pattern=roman.numerals, replacement='dummy') # replace Roman numerals (see above); Replaced with 'dummy' so that word count is not effected
 words = str_replace_all(string=words, pattern=roman.numerals.th, replacement='dummy') # replace Roman numerals with 'th' (see above); Replaced with 'dummy' so that word count is not effected
 words = str_replace_all(string=words, pattern=roman.numerals.letters, replacement='dummy') # replace Roman numerals with letters (see above); Replaced with 'dummy' so that word count is not effected
@@ -128,8 +156,8 @@ words.length = nchar(words) # length of each word
 nwords = nchar(str_remove_all(string=words, pattern='[^0-9]')) # number of numbers
 lwords = nchar(str_remove_all(string=words, pattern='[^a-z]')) # number of lower case letters
 uwords = nchar(str_remove_all(string=words, pattern='[^A-Z]')) # number of upper case letters
-# acronym if more upper case than lower and numbers combined
-acronym.match = ((uwords > (lwords+nwords)) & uwords>=2)  | words=='H1N1' # added H1N1 as specific and common rule break
+# acronym if upper case >= lower and numbers combined
+acronym.match = ((uwords >= (lwords+nwords)) & uwords>=2)  
 
 # store acronyms in separate data set
 aframe = NULL

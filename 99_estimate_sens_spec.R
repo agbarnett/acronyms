@@ -17,6 +17,7 @@ plot(p, post, xlim=c(0.9,1), type='b')
 cat('The 95% confidence interval is ', round(1000*qbeta(0.025, shape1=(n.check-n.fail)+1, shape2=1+n.fail))/1000, 
     ' to ', round(1000*qbeta(0.975, shape1=(n.check-n.fail)+1, shape2=1+n.fail))/1000, '.\n', sep='')
 cat('There is a 95% probability that the sensitivity/specificity is at least ', round(1000*qbeta(0.05, shape1=(n.check-n.fail)+1, shape2=1+n.fail))/1000, '.\n', sep='')
+cat('There is a 95% probability that the error is at most ', 1- round(1000*qbeta(0.05, shape1=(n.check-n.fail)+1, shape2=1+n.fail))/1000, '.\n', sep='')
 
 # posterior with one failure
 n.fail = 1

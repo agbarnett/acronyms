@@ -12,7 +12,7 @@ source('99_main_function_abstract.R') # main function for abstracts
 # load data for further processing.
 #numbers.to.loop = round(seq(1, 1014, length.out = 20)) # selected points in time, useful for an initial run
 #set.seed(12345); numbers.to.loop = sample(1:1014, replace=FALSE, size=10) # random points in time
-numbers.to.loop = 61:1015 # all of them!
+numbers.to.loop = 1:1015 # all of them!
 for (number in numbers.to.loop){ 
 
   if(number%%10 == 0){cat(paste('Up to file',number,'\r'))} # progress bar

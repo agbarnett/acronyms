@@ -10,7 +10,7 @@ source('99_main_function_abstract.R') # main function for abstracts
 load('data/pubmed_list.RData') # id.list from 1_make_pubmed_list.R
 
 # pubmed id to check
-to.check = 21104123
+to.check = 29753800 
 
 # find this pubmed ID in big list of files
 which.number = filter(id.list, pmid==to.check) 
