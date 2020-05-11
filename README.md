@@ -5,12 +5,14 @@ R code to read and analyse data to examine the use of acronyms in published pape
 The folder `animation` contains animations of the top 20 acronyms per year over time in titles and abstracts.
 
 The folder `data` contains the following data on acronyms and the meta-data on papers:
-* `titles.rds` meta-data on the 24,873,372 included titles in RDS format
-* `titles_sample.csv` a random sample of 1,000 included titles from `titles.rds` in tab-delimited format
-* `abstracts.rds` meta-data on the 18,249,091 included titles in rds format
+* `titles1.rds` meta-data on the 24,873,372 included titles in rds format (up to _PubMed_ ID 17000000)
+* `titles2.rds` meta-data on the 24,873,372 included titles in rds format (beyond _PubMed_ ID 17000000)
+* `titles_sample.txt` a random sample of 1,000 included titles in tab-delimited format
+* `abstracts1.rds` meta-data on the 18,249,091 included titles in rds format (up to _PubMed_ ID 17000000)
+* `abstracts2.rds` meta-data on the 18,249,091 included titles in rds format (beyond _PubMed_ ID 17000000)
 * `abstracts_sample.txt` a random sample of 1,000 included abstracts from `abstracts.RDS` in tab-delimited format
-* `acronyms_sample.txt` a random sample of acronyms from 1,000 papers in ttab-delimitedxt format 
-I have used random samples because the complete data are too large to share here.
+* `acronyms_sample.txt` a random sample of acronyms from 1,000 papers in tab-delimited format 
+The data are very large and hence I had to split the files in order to share them here. For the tab-delimited files I've given a random sample as an easily accessible taster of the data.
 
 The data were sourced directly from _PubMed_ in XML format ([available here](ftp://ftp.ncbi.nlm.nih.gov/pubmed/baseline/)) hosted by the National Library of Medicine. The data here do not reflect the most current/accurate data available from the National Library of Medicine. The data were downloaded between 14 to 22 April 2020.
 
@@ -22,7 +24,7 @@ The variables in `title.rds`, `titles_sample.txt`, `abstracts.rds` and `abstract
 * `n.authors` number of authors
 * `n.words` number of words in the title or abstract
 
-The `acronyms.csv` and `acronyms.rds` variables are:
+The `acronyms_sample.txt` and `acronyms.rds` variables are:
 * `pmid` _PubMed_ ID number
 * `acronyms` the acronym (e.g., "HIV")
 * `nchar` the number of characters in the acronym
