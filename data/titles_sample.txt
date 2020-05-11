@@ -1,0 +1,1001 @@
+pmid	date	type	jabbrv	n.authors	n.words
+15136	1977-03-01	Journal Article	J Virol	3	11
+36011	1979-03-01	Journal Article	Andrologia	2	12
+42735	1979-12-01	Journal Article	J Pharm Pharmacol	3	6
+110820	1979-04-01	Journal Article	J Cell Sci	2	14
+168275	1975-07-01	Journal Article	J Infect Dis	2	9
+266854	1977-01-01	Journal Article	Arch Oral Biol	4	13
+269626	1977-01-01	Journal Article	Acta Obstet Gynecol Scand Suppl	3	8
+277701	1978-08-01	Case Reports	J Med Soc N J	1	5
+283136	1979-03-01	Journal Article	J Dent Res	1	7
+308183	1978-09-28	Journal Article	N Engl J Med	5	11
+318164	1979-03-15	Journal Article	J Mol Biol	2	9
+355686	1978-04-01	Journal Article	Jpn J Med Sci Biol	2	20
+384961	1979-03-01	Other	Arch Phys Med Rehabil	0	7
+447996	1979-07-01	Journal Article	J Am Geriatr Soc	2	6
+473467	1979-08-01	Case Reports	Urology	6	13
+524923	1979-09-01	Journal Article	Yale J Biol Med	2	13
+534763	1979-01-01	Journal Article	Biorheology	3	14
+591296	1977-10-01	Case Reports	Isr J Med Sci	4	15
+593924	1977-12-01	Journal Article	Nurs Times	1	6
+620722	1978-01-15	Journal Article	Experientia	4	14
+626055	1978-01-01	Journal Article	Acta Otolaryngol	5	8
+671207	1978-01-01	Case Reports	J Perinat Med	1	23
+858060	1977-04-23	Other	Br Med J	3	6
+903085	1977-10-01	Journal Article	Hosp Community Psychiatry	1	12
+953061	1976-01-01	Journal Article	Biochimie	4	16
+979189	1976-08-01	Journal Article	J Soc Psychol	1	16
+1007758	1976-01-01	Journal Article	Acta Biol Med Ger	3	16
+1064400	1976-02-01	Case Reports	Aust N Z J Surg	3	2
+1067325	1976-10-01	Journal Article	J Am Coll Dent	1	3
+1078944	1975-01-01	Journal Article	Am J Roentgenol Radium Ther Nucl Med	3	7
+1087594	1976-12-01	Journal Article	Clin Exp Immunol	6	19
+1133813	1975-03-01	Journal Article	J Med Chem	6	7
+1163203	1975-01-01	Journal Article	Acta Anat (Basel)	1	19
+1169992	1975-06-01	Journal Article	Biol Psychiatry	2	14
+1218994	1975-12-01	Journal Article	Isr J Med Sci	3	14
+1230447	1975-01-01	Journal Article	Int J Psychiatry Med	3	8
+1352638	1992-07-01	Journal Article	Physiol Rev	3	11
+1376617	1992-02-01	Clinical Trial	Ann Oncol	5	22
+1400690	1992-09-01	Journal Article	J Child Psychol Psychiatry	2	19
+1406043	1992-09-01	Journal Article	Lepr Rev	1	5
+1453811	1992-05-01	Journal Article	Med Biol Eng Comput	4	12
+1457689	1992-01-01	Journal Article	Biomater Artif Cells Immobilization Biotechnol	10	13
+1496761	1992-06-20	Journal Article	Vet Rec	4	3
+1546797	1992-02-01	Journal Article	Anat Rec	1	19
+1604585	1992-06-01	Journal Article	Transplant Proc	10	18
+1633573	1992-06-01	Journal Article	Comput Appl Biosci	9	10
+1647784	1991-02-01	Journal Article	J Biomol Struct Dyn	2	11
+1710952	1991-06-01	Other	Clin Chem	1	20
+1717121	1991-11-15	Clinical Trial	Cancer	10	30
+1729593	1992-01-01	Journal Article	Mol Cell Biol	2	14
+1763486	1991-10-01	Clinical Trial	Vet Parasitol	4	6
+1847038	1991-02-11	Journal Article	Arch Surg	9	8
+1849073	1991-04-01	Journal Article	EMBO J	3	15
+1892710	1991-01-01	Journal Article	Annu Rev Nutr	2	12
+2003324	1991-03-01	Journal Article	Transfusion	4	10
+2105136	1990-01-06	Other	BMJ	0	2
+2134413	1990-03-01	Case Reports	J Spinal Disord	1	11
+2159752	1990-01-01	Journal Article	Ann N Y Acad Sci	6	12
+2184094	1990-01-01	Journal Article	Genet Epidemiol	4	22
+2204017	1990-01-01	Journal Article	Oncogene Res	2	18
+2269901	1990-11-01	Case Reports	J Obstet Gynecol Neonatal Nurs	1	5
+2296932	1990-01-01	Clinical Trial	Am J Clin Nutr	6	16
+2311499	1990-01-01	Journal Article	Diabetes Educ	1	9
+2322508	1990-03-01	Journal Article	Br J Ophthalmol	3	10
+2326138	1990-02-01	Journal Article	Percept Mot Skills	1	13
+2330149	1990-02-07	Editorial	Nursing (Lond)	1	4
+2344493	1990-04-14	Comment	BMJ	2	7
+2375361	1990-07-01	Comment	Am J Obstet Gynecol	1	7
+2451674	1988-04-25	Other	J Biol Chem	3	9
+2475029	1989-08-01	Journal Article	Am J Physiol	5	11
+2479901	1989-09-01	Journal Article	Parasite Immunol	5	16
+2493142	1989-02-13	Journal Article	Neurosci Lett	4	15
+2526875	1989-05-01	Journal Article	J Rheumatol	2	12
+2531842	1989-10-01	Other	Mol Immunol	3	29
+2566844	1989-06-10	Other	Lancet	7	5
+2610281	1989-09-01	Case Reports	Am J Sports Med	3	5
+2643620	1989-01-01	Other	J Clin Microbiol	2	24
+2645111	1989-03-01	Journal Article	Endocrinology	3	17
+2662673	1989-01-01	Journal Article	VASA	3	8
+2701663	1989-06-01	Journal Article	Curr Opin Rheumatol	1	5
+2748100	1989-01-01	Other	Ophthalmologica	3	6
+2778167	1989-07-01	Journal Article	J Dairy Sci	4	14
+2872275	1986-07-01	Journal Article	J Neurochem	6	23
+2894916	1988-01-01	Journal Article	Comp Biochem Physiol A Comp Physiol	3	15
+2936774	1986-02-01	Case Reports	J Am Acad Dermatol	2	9
+2944354	1986-08-01	Journal Article	Acta Physiol Scand	2	13
+2986444	1985-05-01	Journal Article	Am J Clin Nutr	3	16
+2988433	1985-04-01	Journal Article	Antimicrob Agents Chemother	4	14
+3000333	1985-07-01	Journal Article	Avian Dis	4	10
+3008923	1986-03-05	Journal Article	Brain Res	2	12
+3026420	1986-10-01	Journal Article	Biochem Cell Biol	3	11
+3060037	1988-01-01	Journal Article	Arch Microbiol	1	16
+3075230	1988-05-01	Other	J Endod	3	12
+3116271	1987-01-01	Other	J Mol Evol	2	24
+3131951	1988-02-01	Journal Article	Vet Immunol Immunopathol	3	19
+3133105	1988-06-15	Journal Article	Cancer Lett	4	18
+3161913	1985-08-01	Case Reports	J Am Acad Dermatol	3	6
+3171187	1988-10-04	Journal Article	J Immunol Methods	5	13
+3182943	1988-02-01	Journal Article	J Cell Sci	8	8
+3211584	1988-11-01	Journal Article	Orthop Nurs	1	11
+3283516	1988-01-01	Journal Article	N Engl Reg Allergy Proc	1	8
+3312560	1987-07-01	Journal Article	J Pediatr Ophthalmol Strabismus	3	6
+3332540	1987-12-01	Journal Article	Gynecol Endocrinol	1	6
+3426936	1987-11-01	Journal Article	Br J Cancer	4	9
+3440739	1987-12-01	Journal Article	Isr J Med Sci	3	8
+3443141	1987-01-01	Journal Article	Eur J Clin Pharmacol	4	22
+3461239	1986-07-21	Other	Med J Aust	5	13
+3474711	1987-07-01	Journal Article	RDH	1	5
+3478225	1987-01-01	Case Reports	Fla Dent J	1	4
+3541322	1987-01-01	Journal Article	Transplantation	5	6
+3541578	1987-01-01	Other	Am J Orthod Dentofacial Orthop	1	7
+3607836	1987-01-01	Journal Article	Cell Mol Biol	4	17
+3611939	1986-04-01	Journal Article	Int J Colorectal Dis	1	15
+3631896	1987-05-01	Journal Article	Anticancer Res	3	16
+3697955	1986-04-01	Journal Article	Cancer Lett	2	14
+3698132	1986-01-01	Journal Article	Chem Pharm Bull	4	18
+3711298	1986-06-01	Journal Article	J Clin Microbiol	4	14
+3716166	1986-02-22	Journal Article	Vet Rec	1	7
+3728481	1986-06-01	Journal Article	Am J Hosp Pharm	4	9
+3755133	1986-06-25	Journal Article	J Biol Chem	2	12
+3773814	1986-11-17	Other	Med J Aust	0	3
+3778194	1986-11-01	Case Reports	Arch Surg	1	8
+3844280	1985-02-01	Journal Article	RN	1	7
+3917625	1985-01-01	Other	Anesthesiology	2	9
+3928145	1985-10-01	Journal Article	Cancer Res	2	14
+3974249	1985-03-01	Case Reports	J Surg Oncol	2	5
+4041445	1985-09-10	Journal Article	Biochim Biophys Acta	3	24
+4050799	1985-01-01	Journal Article	Am J Ind Med	0	20
+4084867	1985-11-01	Journal Article	Can J Neurol Sci	6	12
+4199710	1973-09-01	Journal Article	Clin Pharmacol Ther	5	6
+4206552	1974-04-10	Journal Article	J Biol Chem	3	28
+4242922	1969-11-01	Journal Article	J Bacteriol	4	12
+4324681	1971-06-01	Journal Article	Endocrinology	3	12
+4371981	1974-01-01	Journal Article	Cell Tissue Res	2	22
+4556734	1972-07-01	Other	Pediatrics	1	12
+4570849	1973-02-01	Journal Article	Biochemistry	2	19
+4578388	1973-04-01	Journal Article	J Biochem	2	9
+4583952	1973-07-01	Other	Aust Vet J	0	4
+4681124	1972-03-01	Journal Article	Panminerva Med	4	8
+4724765	1973-08-01	Journal Article	Gen Comp Endocrinol	1	17
+4748481	1973-08-01	Journal Article	J Anim Sci	3	12
+4767319	1973-11-16	Other	Biochem Biophys Res Commun	3	8
+4833686	1974-05-15	Journal Article	Experientia	4	14
+4847087	1974-07-03	Journal Article	Cell Tissue Res	2	10
+4861228	1967-07-01	Other	J Pathol Bacteriol	1	8
+4885816	1969-03-01	Journal Article	Mo Med	1	6
+4929080	1971-03-01	Clinical Trial	Clin Pharmacol Ther	3	6
+5022443	1972-02-01	Journal Article	Can J Physiol Pharmacol	1	15
+5035125	1972-06-01	Journal Article	Can J Psychol	2	8
+5047417	1972-08-01	Journal Article	J Urol	3	15
+5054221	1972-09-01	Journal Article	Am J Clin Nutr	1	6
+5079053	1972-01-01	Journal Article	Hum Hered	4	10
+5088865	1971-05-14	Journal Article	Doc Ophthalmol	1	18
+5118775	1971-08-01	Journal Article	Hum Factors	3	14
+5202071	1970-09-11	Journal Article	Nurs Mirror Midwives J	1	7
+5228000	1967-03-01	Journal Article	TIC	0	8
+5299583	1967-01-01	Journal Article	Int J Radiat Biol Relat Stud Phys Chem Med	3	12
+5367942	1969-11-01	Journal Article	Lipids	2	7
+5552258	1971-01-01	Journal Article	Pharmacology	2	15
+5617808	1967-04-30	Journal Article	Rass Neurol Veg	3	16
+5647910	1968-04-01	Journal Article	Ann Otol Rhinol Laryngol	1	3
+5655136	1968-03-01	Journal Article	J Exp Zool	4	15
+5672473	1968-09-01	Journal Article	Am J Obstet Gynecol	3	14
+5921148	1966-01-01	Journal Article	Med Art	1	7
+6038962	1967-03-01	Journal Article	Med Times	1	4
+6055779	1967-08-30	Journal Article	J Ultrastruct Res	1	25
+6071145	1967-01-09	Journal Article	JAMA	2	9
+6072215	1967-10-09	Journal Article	JAMA	4	9
+6120728	1982-01-01	Journal Article	Br J Hosp Med	1	5
+6181183	1982-07-01	Journal Article	J Gen Microbiol	3	12
+6184969	1982-01-01	Journal Article	Adv Neurol	2	6
+6249022	1980-07-15	Journal Article	Virology	2	22
+6265519	1981-05-01	Journal Article	J Agric Food Chem	4	13
+6326644	1983-01-01	Journal Article	Ann N Y Acad Sci	6	11
+6346842	1983-01-01	Journal Article	Alpha Omegan	2	11
+6401736	1983-02-25	Journal Article	J Biol Chem	3	17
+6416731	1983-09-01	Journal Article	Clin Nucl Med	2	5
+6464797	1984-07-01	Other	Acta Psychiatr Scand	2	8
+6465926	1984-07-01	Editorial	Arch Dis Child	1	10
+6469752	1984-08-01	Journal Article	Int J Radiat Oncol Biol Phys	2	15
+6525751	1984-12-01	Journal Article	Can J Appl Sport Sci	2	4
+6562143	1984-03-01	Journal Article	J Adv Nurs	2	11
+6725990	1984-04-01	Journal Article	J Infect Dis	3	10
+6736073	1984-04-01	Journal Article	J Biomed Mater Res	2	5
+6741420	1984-01-01	Journal Article	Acta Genet Med Gemellol (Roma)	1	12
+6846644	1983-06-01	Journal Article	Am J Psychiatry	2	12
+6857498	1983-06-01	Journal Article	Surgery	2	14
+6893055	1980-04-01	Case Reports	J Endocrinol Invest	4	14
+6894150	1981-01-23	Journal Article	J Chromatogr	3	15
+6895419	1981-08-01	Journal Article	Res Commun Chem Pathol Pharmacol	2	9
+6919423	1982-02-01	Journal Article	Aust Nurses J	1	8
+6924802	1982-11-01	Journal Article	Todays OR Nurse	1	6
+6929957	1980-04-01	Case Reports	N Z Dent J	1	7
+6935434	1980-01-01	Case Reports	J Pedod	1	10
+6958410	1982-10-01	Other	Community Dent Oral Epidemiol	1	10
+6966743	1980-01-01	Case Reports	Mt Sinai J Med	2	9
+7046452	1982-07-01	Case Reports	Am J Ophthalmol	2	7
+7054949	1982-01-01	Journal Article	Adv Neurol	5	7
+7097437	1982-08-01	Other	J Pediatr	0	3
+7127748	1982-10-01	Journal Article	Clin Chem	5	15
+7200495	1982-04-01	Journal Article	J Comput Assist Tomogr	2	11
+7211853	1980-11-01	Journal Article	Am J Hosp Pharm	2	6
+7227437	1980-12-01	Journal Article	Eur J Cancer	0	23
+7283087	1981-01-01	Case Reports	Brain Dev	1	16
+7294103	1981-09-01	Case Reports	Am J Ophthalmol	6	7
+7352415	1980-01-01	Journal Article	Am J Clin Pathol	3	7
+7530236	1995-01-27	Journal Article	Int J Cancer	6	15
+7542806	1995-06-26	Journal Article	Toxicology	4	10
+7592254	1995-08-01	Journal Article	J Autism Dev Disord	3	12
+7697727	1995-04-01	Journal Article	Cell Immunol	6	12
+7766505	1995-04-12	Journal Article	Nurs Stand	1	5
+7795332	1995-04-01	Journal Article	Transfus Med Rev	4	7
+7807496	1994-09-01	Journal Article	J Hum Hypertens	1	9
+7859669	1994-10-01	Journal Article	Electromyogr Clin Neurophysiol	6	8
+7969832	1994-08-01	Journal Article	Neurosurgery	4	6
+7987272	1994-02-01	Journal Article	Br J Audiol	5	5
+8013029	1994-03-01	Other	Cardiovasc Intervent Radiol	3	13
+8087411	1994-02-01	Journal Article	Mol Cell Neurosci	2	16
+8104343	1993-01-01	Journal Article	Proc West Pharmacol Soc	5	10
+8119363	1994-02-01	Journal Article	Epidemiol Infect	3	16
+8126845	1994-04-01	Case Reports	J Urol	1	5
+8159468	1994-02-01	Journal Article	Parasitology	5	16
+8183510	1994-02-01	Case Reports	Ophthalmic Surg	2	6
+8208552	1994-07-01	Journal Article	Oncogene	7	15
+8320869	1993-01-01	Other	Jpn J Ophthalmol	4	14
+8347802	1993-06-01	Journal Article	Neuroreport	3	9
+8365959	1993-07-01	Journal Article	J Appl Bacteriol	6	10
+8457471	1993-02-01	Journal Article	Br J Haematol	4	18
+8493240	1993-01-01	Clinical Trial	Parasitol Res	5	9
+8496232	1993-05-01	Other	J Bone Joint Surg Br	3	8
+8496270	1993-04-21	Journal Article	J Chromatogr	2	19
+8515701	1993-04-01	Other	Md Med J	1	5
+8570172	1995-12-07	Journal Article	Oncogene	5	12
+8604757	1996-03-01	Journal Article	Am J Public Health	5	14
+8620573	1996-01-05	Journal Article	Chem Biol Interact	4	20
+8637633	1995-11-01	Journal Article	Neuroscience	6	20
+8690702	1996-01-01	Journal Article	J Clin Psychiatry	2	11
+8775553	1995-12-01	Journal Article	Acta Paediatr Jpn	6	11
+8800738	1995-09-01	Case Reports	J Heart Lung Transplant	4	15
+8811441	1996-06-07	Journal Article	J Chromatogr B, Biomed Appl	3	10
+8829498	1996-01-01	Case Reports	Dermatology (Basel)	7	8
+8834380	1996-01-01	Journal Article	Biol Trace Elem Res	4	21
+8841625	1995-01-01	Journal Article	Nucleic Acids Symp Ser	5	15
+8867411	1996-03-01	Journal Article	Indiana Med	1	10
+8871928	1996-08-01	Journal Article	Mod Pathol	6	13
+8957511	1996-12-02	Case Reports	Am J Med Genet	4	4
+8989107	1996-12-15	Comment	Circulation	2	8
+9009732	1996-01-01	Journal Article	Prog Brain Res	2	6
+9030369	1997-02-01	Journal Article	AIDS	6	8
+9040425	1997-02-15	Journal Article	Hosp Pract (1995)	2	4
+9055423	1997-03-01	Journal Article	Appl Environ Microbiol	3	26
+9055729	1997-02-22	Comment	BMJ	1	14
+9067845	1997-03-24	Journal Article	J Comp Neurol	3	13
+9075112	1997-03-01	Editorial	Nephrol Dial Transplant	1	15
+9080269	1997-03-01	Journal Article	J Adv Nurs	1	12
+9116683	1996-01-01	Journal Article	Neurobiology (Bp)	1	10
+9170070	1996-01-01	Case Reports	J Am Psychoanal Assoc	1	6
+9180648	1997-05-01	Other	J Clin Epidemiol	5	16
+9187670	1997-06-01	Case Reports	Hum Genet	9	26
+9242939	1997-07-01	Journal Article	ASAIO J	5	10
+9273952	1997-06-30	Journal Article	Rev Rhum Engl Ed	1	2
+9284904	1997-09-01	Journal Article	Metab Clin Exp	4	13
+9383798	1997-12-31	Journal Article	Optom Vis Sci	8	8
+9414456	1996-09-01	Journal Article	Rev Reprod	2	4
+9438332	1998-01-23	Journal Article	Am Ind Hyg Assoc J	5	21
+9445034	1998-01-28	Journal Article	J Virol	5	21
+9460377	1998-02-14	Other	J Emerg Nurs	1	7
+9505745	1998-03-20	Case Reports	Anaesthesia	4	8
+9509731	1998-03-24	Comment	Ear Nose Throat J	1	13
+9527307	1998-04-04	Journal Article	Cleft Palate Craniofac J	4	13
+9539779	1998-05-16	Journal Article	Proc Natl Acad Sci USA	11	16
+9613879	1998-06-05	Journal Article	Semin Nephrol	2	17
+9619483	1998-06-10	Journal Article	Immunol Cell Biol	4	15
+9628675	1998-06-17	Other	J Thorac Cardiovasc Surg	5	16
+9650588	1998-07-03	Journal Article	FEBS Lett	3	10
+9688168	1998-08-04	Clinical Trial	Lipids	7	19
+9703125	1998-08-14	Journal Article	J Am Acad Dermatol	2	9
+9806736	1998-11-07	Journal Article	Am J Respir Cell Mol Biol	5	12
+9814300	1998-11-14	Journal Article	J Perianesth Nurs	1	5
+9832362	1998-12-01	Journal Article	J Chromatogr B Biomed Sci Appl	2	19
+9859896	1998-12-22	Journal Article	J Speech Lang Hear Res	2	14
+9898046	1987-05-15	Journal Article	Phys Rev A Gen Phys	4	19
+9920583	1989-04-01	Journal Article	Phys Rev A Gen Phys	2	14
+9957095	1986-12-01	Journal Article	Phys Rev, D	2	12
+9977936	1995-05-01	Journal Article	Phys Rev, B Condens Matter	5	9
+10053127	1999-03-04	Other	J Magn Reson	4	10
+10082581	1999-03-19	Other	Mol Cell Biol	10	16
+10084571	1999-03-20	Journal Article	J Clin Endocrinol Metab	12	15
+10118437	1992-03-02	Journal Article	Adv Data	1	8
+10177684	1998-01-07	Journal Article	Healthc Inform	1	5
+10222182	1999-05-01	Journal Article	J Invertebr Pathol	3	15
+10226910	1999-05-05	Journal Article	J Med Ethics	1	13
+10253522	1981-08-09	Journal Article	Libr Technol Rep	0	11
+10289189	1978-12-13	Journal Article	N Z Hosp	0	10
+10299731	1984-10-07	Journal Article	Comput Healthc	1	3
+10299903	1985-02-10	Journal Article	Natl J (Wash)	1	4
+10311095	1985-03-11	Journal Article	Bests Rev Life Health Insur Ed	1	5
+10324111	1980-09-10	Journal Article	Health Law Vigil	1	11
+10335661	1999-05-21	Other	Mol Biol Evol	4	15
+10376916	1999-06-22	Clinical Trial	J Cardiovasc Electrophysiol	11	17
+10378698	1999-06-23	Journal Article	Oncogene	1	8
+10473581	1999-09-03	Journal Article	J Biol Chem	3	17
+10495112	1999-09-24	Journal Article	Phys Med Biol	5	25
+10495431	1999-09-25	Journal Article	Int J Cancer	10	12
+10500014	1999-09-29	Clinical Trial	Am J Clin Nutr	5	17
+10514910	1999-10-09	Other	Chir Ital	5	7
+10546456	1999-11-05	Journal Article	Med Arh	6	17
+10562263	1999-11-16	Journal Article	Circulation	6	13
+10563484	1999-11-24	Case Reports	Clin Genet	9	9
+10627252	2000-01-08	Journal Article	Ann Intern Med	1	3
+10640505	2000-01-21	Other	Drug Metab Dispos	3	12
+10655020	2000-02-02	Journal Article	Can J Gastroenterol	1	10
+10664387	2000-02-09	Journal Article	Arch Virol	6	9
+10691340	2000-02-26	Journal Article	Occup Environ Med	6	23
+10692905	2000-02-29	Journal Article	J R Soc Med	4	5
+10708346	2000-03-09	Journal Article	Schizophr Res	3	15
+10714219	2000-03-14	Journal Article	Verh Dtsch Ges Pathol	6	21
+10726439	2000-03-22	Other	J Sports Med Phys Fitness	2	9
+10832942	2000-06-01	Case Reports	South Med J	2	6
+10899306	2000-07-19	Journal Article	FEBS Lett	2	16
+10919317	2000-08-05	Journal Article	Curr Probl Cancer	1	9
+10922170	2000-08-02	Journal Article	Br J Oral Maxillofac Surg	1	5
+10942186	2000-08-15	Journal Article	Ther Drug Monit	3	13
+11025831	2000-10-12	Journal Article	JAMA	11	17
+11029987	2000-10-13	Journal Article	Am J Public Health	6	16
+11031005	2000-10-14	Journal Article	J Org Chem	3	14
+11032325	2000-10-14	Journal Article	Chromosome Res	8	10
+11087551	2000-11-23	Journal Article	J Agric Food Chem	6	18
+11111619	2000-12-09	Journal Article	J Clin Nurs	3	13
+11145777	2001-01-06	Journal Article	Ann Emerg Med	2	15
+11150258	2001-01-11	Journal Article	Ophthalmology	7	12
+11160966	2001-02-13	Case Reports	Neurology	6	11
+11184505	2001-02-24	Journal Article	Health Serv J	1	7
+11188079	2001-02-24	Journal Article	Natl Rep Subacute Care	0	13
+11244505	2001-03-13	Journal Article	Oncogene	7	23
+11267241	2001-03-27	Journal Article	Transplant Proc	1	15
+11279966	2001-03-31	Case Reports	Headache	1	18
+11346123	2001-05-11	Comment	Med J Aust	1	6
+11388758	2001-06-05	Journal Article	Genet Med	4	15
+11401087	2001-06-13	Journal Article	Ann Hematol	3	17
+11454638	2001-07-17	Journal Article	Ann Rheum Dis	8	11
+11461859	2001-07-20	Other	AJR Am J Roentgenol	9	19
+11500330	2001-08-14	Comment	Am J Respir Crit Care Med	1	15
+11506958	2001-08-17	Journal Article	Eur J Cancer	7	13
+11517261	2001-08-23	Journal Article	J Neurosci	5	20
+11517305	2001-08-23	Journal Article	Proc Natl Acad Sci USA	5	13
+11518235	2001-08-24	Journal Article	J Anim Sci	3	19
+11522741	2001-08-28	Journal Article	Gastroenterology	6	17
+11526483	2001-08-30	Other	Oncogene	2	17
+11540977	1995-10-01	Journal Article	Acta Astronaut	9	8
+11600297	2001-10-16	Journal Article	J Pharm Biomed Anal	1	14
+11604474	2001-10-18	Other	J Natl Cancer Inst	1	7
+11703242	2001-11-13	Case Reports	Anaesthesia	4	11
+11730330	2001-12-04	Journal Article	J Am Acad Orthop Surg	2	10
+11746269	2001-12-18	Journal Article	Prostate	6	17
+11829542	2002-02-07	Comment	ACP J Club	1	16
+11835120	2002-02-09	Clinical Trial	Exp Clin Endocrinol Diabetes	6	14
+11853216	2002-02-21	Journal Article	Zhonghua Yi Xue Za Zhi (Taipei)	7	16
+11933875	2002-04-06	Other	Regul Pept	0	17
+11946212	1971-12-15	Journal Article	FEBS Lett	3	10
+11957901	2002-04-18	Editorial	Nurs Times	2	9
+11964576	2002-04-20	Clinical Trial	Am J Phys Med Rehabil	3	16
+12093441	2002-07-03	Journal Article	Nutrition	6	13
+12136025	2002-07-24	Journal Article	Genetics	10	11
+12140910	2002-07-27	Journal Article	Crit Care Clin	2	6
+12178879	2002-08-15	Journal Article	Conscience	1	8
+12180327	2002-08-16	Journal Article	Chemistry	7	19
+12204662	2002-09-03	Journal Article	Eur J Cancer	1	8
+12240369	2002-09-21	Journal Article	Chem Commun (Camb)	4	15
+12444579	2002-11-22	Journal Article	Appl Nurs Res	1	9
+12449937	2002-11-27	Journal Article	Law Philos	1	5
+12456134	2002-11-29	Journal Article	Contemp Top Lab Anim Sci	2	16
+12484556	2002-12-18	Journal Article	Exp Toxicol Pathol	6	11
+12497588	2002-12-24	Journal Article	Prostate	3	18
+12507079	2003-01-01	Journal Article	J Neurosurg	2	12
+12508218	2003-01-01	Journal Article	Catheter Cardiovasc Interv	1	23
+12516220	2003-01-09	Journal Article	Capitation Manag Rep	0	11
+12571596	2003-02-07	Journal Article	Nature	6	13
+12574954	2003-02-08	Clinical Trial	J Neurol	4	12
+12605046	2003-02-27	Journal Article	Cornea	5	13
+12649011	2003-03-22	Other	Med Eng Phys	3	17
+12654298	2003-03-26	Journal Article	Dev Biol	2	10
+12741825	2003-05-14	Journal Article	Biochemistry	4	14
+12803673	2003-06-14	Journal Article	Neurologist	1	12
+12806222	2003-06-14	Journal Article	Curr Opin Clin Nutr Metab Care	2	25
+12849276	2003-07-10	Case Reports	Lancet Neurol	1	2
+12851764	2003-07-10	Clinical Trial	Intensive Care Med	10	29
+12969780	2003-09-13	Journal Article	J Soc Gynecol Investig	2	12
+13014825	1952-12-01	Journal Article	R I Med J	1	6
+13050332	1953-02-01	Journal Article	Acta Med Orient	1	6
+13084538	1953-08-01	Other	J Aviat Med	0	5
+13154624	1954-05-01	Journal Article	N Y State J Med	1	7
+13158069	1954-01-01	Journal Article	Acta Physiol Acad Sci Hung	2	8
+13160046	1954-01-01	Journal Article	Biol Lat	2	12
+13227804	1954-01-01	Journal Article	Acta Derm Venereol	3	7
+13240135	1955-08-13	Journal Article	Br Med J	0	4
+13279318	1955-01-01	Journal Article	Med Radiogr Photogr	1	9
+13343071	1956-08-01	Journal Article	Can Med Assoc J	4	12
+13436509	1957-06-01	Journal Article	Blood	2	18
+13462259	1957-07-01	Journal Article	Grace Hosp Bul	3	3
+13657702	1959-05-01	Journal Article	Phys Ther Rev	1	7
+13798936	1959-09-01	Journal Article	Am J Surg	1	7
+13907805	1962-03-01	Journal Article	J Radiat Res	7	8
+13930937	1962-12-27	Journal Article	N Engl J Med	1	4
+13952730	1963-01-01	Journal Article	Ann Surg	2	7
+14034267	1962-10-01	Journal Article	Yokohama Med Bull	2	11
+14034738	1963-05-01	Journal Article	J Nutr	3	10
+14407710	1960-06-01	Journal Article	Aerosp Med	1	14
+14416490	1959-08-01	Journal Article	Am Rev Respir Dis	8	8
+14485575	1962-09-01	Journal Article	J Am Med Womens Assoc	1	3
+14583305	2003-10-30	Journal Article	Eur J Cardiothorac Surg	6	11
+14593093	2003-11-01	Journal Article	J Biol Chem	4	21
+14598861	2003-11-06	Journal Article	Clin Chem Lab Med	10	7
+14633153	2003-11-25	Journal Article	Kidney Int	10	18
+14636220	2003-11-26	Journal Article	Int J Androl	5	10
+14649988	2003-12-03	Journal Article	Can Fam Physician	3	13
+14674596	2003-12-17	Journal Article	Arch Environ Contam Toxicol	2	20
+14682080	2003-12-20	Case Reports	Am J Alzheimers Dis Other Demen	3	12
+14728022	2004-01-20	Journal Article	Am J Cardiovasc Drugs	4	7
+14737096	2004-01-23	Other	Genes Immun	7	10
+14755289	2004-02-03	Comment	Nat Biotechnol	1	8
+14846238	1951-06-01	Journal Article	U S Armed Forces Med J	6	11
+14918728	1952-02-23	Journal Article	Med J Aust	1	5
+14981683	2004-02-26	Journal Article	Electrophoresis	3	20
+15020295	2004-03-17	Journal Article	Am J Physiol Lung Cell Mol Physiol	8	8
+15038161	2004-03-25	Other	BioTechniques	4	11
+15075099	2004-04-13	Case Reports	Haematologica	9	21
+15080626	2004-04-15	Journal Article	J Agric Food Chem	5	12
+15086768	2004-04-17	Journal Article	Wound Repair Regen	5	11
+15132533	2004-05-11	Journal Article	J Org Chem	3	19
+15285234	2004-08-03	Case Reports	Int Surg	6	10
+15292388	2004-08-05	Journal Article	J Natl Cancer Inst	7	17
+15292438	2004-08-05	Comment	J Bone Joint Surg Am	2	10
+15317444	2004-08-20	Journal Article	Am Fam Physician	2	11
+15329471	2004-08-27	Journal Article	J Reprod Dev	11	15
+15334907	2004-09-01	Journal Article	J Sep Sci	3	11
+15411119	1950-04-01	Journal Article	Ann Intern Med	2	8
+15492235	2004-10-20	Journal Article	Cancer Res	8	18
+15534779	2004-11-10	Case Reports	J Reconstr Microsurg	4	14
+15551661	2004-11-24	Journal Article	Can J Nurs Res	2	11
+15571784	2004-12-02	Clinical Trial	J Affect Disord	6	16
+15592584	2004-12-14	Journal Article	Reprod Biol	2	11
+15653398	2005-01-18	Journal Article	Curr Opin Plant Biol	2	7
+15654111	2005-01-18	Journal Article	Genetics	5	20
+15670042	2005-01-27	Journal Article	J Thromb Haemost	7	18
+15677242	1977-12-01	Journal Article	Appl Ergon	1	5
+15700995	2005-02-11	Journal Article	J Am Chem Soc	3	7
+15723843	2005-02-23	Journal Article	J Ultrasound Med	4	20
+15750217	2005-03-08	Journal Article	Acta Crystallogr C	3	10
+15795555	2005-03-30	Journal Article	Clin Neuropharmacol	2	5
+15796980	2005-03-31	Journal Article	FEMS Microbiol Lett	5	15
+15811115	2005-04-07	Journal Article	J Cutan Pathol	7	14
+15828731	2005-04-15	Other	Vet Rec	1	4
+15838002	2005-04-20	Comment	J Clin Oncol	5	6
+15852444	2005-04-27	Journal Article	Int J Geriatr Psychiatry	3	23
+15878415	2005-05-10	Journal Article	J Environ Radioact	4	16
+15917361	2005-05-27	Journal Article	Acad Med	7	22
+16007493	2005-07-12	Other	J Mol Evol	2	15
+16023828	2005-07-19	Clinical Trial	Brain Behav Immun	2	13
+16041516	2005-07-26	Journal Article	Anal Bioanal Chem	2	4
+16059775	2005-08-02	Journal Article	Calcif Tissue Int	7	14
+16075937	2005-08-04	Journal Article	J Water Health	3	18
+16078288	2005-08-04	Journal Article	Br J Surg	4	15
+16083429	2005-08-09	Comment	J Spec Pediatr Nurs	1	4
+16083794	2005-08-09	Journal Article	J Allergy Clin Immunol	4	12
+16084061	2005-08-09	Other	Genomics	3	6
+16125556	2005-08-30	Journal Article	Theriogenology	5	14
+16164992	2005-09-17	Journal Article	Biochimie	5	7
+16189362	2005-09-29	Journal Article	JAMA	5	6
+16191187	2005-09-30	Journal Article	Semin Dial	2	16
+16231855	2005-10-20	Journal Article	Clin Lymphoma Myeloma	4	4
+16267574	2005-11-04	Journal Article	Nat Mater	3	8
+16272842	2005-11-08	Case Reports	J Comput Assist Tomogr	7	16
+16275384	2005-11-09	Journal Article	J Allergy Clin Immunol	8	9
+16327782	2005-12-06	Journal Article	Nat Neurosci	4	12
+16357589	2005-12-17	Journal Article	Epidemiology	9	10
+16385956	2006-01-03	Journal Article	Bull Environ Contam Toxicol	3	20
+16421580	2006-01-20	Other	Nat Chem Biol	2	5
+16459824	2006-02-08	Other	Water Sci Technol	3	13
+16504962	2006-03-01	Journal Article	Eur J Med Res	4	21
+16518871	2006-03-07	Other	Proteomics	8	14
+16521613	2006-03-09	Journal Article	J Health Hum Serv Adm	2	6
+16543590	2006-03-18	Journal Article	Radiology	7	13
+16617177	2006-04-18	Other	J Neurophysiol	2	14
+16702950	2006-05-17	Journal Article	Oncogene	5	10
+16718832	2006-05-24	Journal Article	World J Gastroenterol	2	8
+16769377	2006-06-14	Journal Article	J Pediatr	8	22
+16784243	2006-06-21	Journal Article	Biochemistry	6	15
+16786426	2006-06-21	Journal Article	Behav Genet	3	31
+16788739	2006-06-22	Journal Article	Biotechnol Lett	7	5
+16871401	2006-07-28	Journal Article	Acta Neuropathol	6	24
+16878761	2006-08-02	Case Reports	J Vet Dent	1	9
+16879012	2006-08-02	Journal Article	Arch Pathol Lab Med	1	10
+16913521	2006-08-18	Journal Article	Nurs Times	1	6
+16913970	2006-08-18	Editorial	Transpl Infect Dis	2	10
+16928244	2006-08-25	Journal Article	J Dtsch Dermatol Ges	1	3
+16968657	2006-09-14	Journal Article	Vaccine	5	15
+17038041	2006-10-14	Journal Article	Eur J Neurol	7	10
+17054484	2006-10-24	Journal Article	J Vet Med A Physiol Pathol Clin Med	7	12
+17072484	2006-10-31	Journal Article	Mem Inst Oswaldo Cruz	5	13
+17125865	2006-11-28	Other	Radiother Oncol	2	24
+17129150	2006-11-30	Journal Article	J Chem Phys	4	13
+17144927	2006-12-06	Journal Article	BMC Med Inform Decis Mak	6	11
+17195673	2007-01-02	Journal Article	J Econ Entomol	6	19
+17220053	2007-01-16	Journal Article	Arzneimittelforschung	4	18
+17223753	2007-01-17	Journal Article	J Am Vet Med Assoc	5	12
+17262889	2007-01-31	Other	Phytother Res	6	14
+17279016	2007-02-07	Comment	Med Care	2	7
+17298651	2007-02-15	Other	Addiction	5	12
+17321873	2007-02-27	Journal Article	Otolaryngol Head Neck Surg	5	10
+17345604	2007-03-09	Journal Article	Hum Mutat	12	15
+17398378	2007-04-03	Journal Article	J Vasc Surg	7	20
+17400609	2007-04-03	Journal Article	J Leukoc Biol	7	20
+17421047	2007-04-11	Journal Article	Biotechnol Bioeng	2	14
+17424545	2007-04-11	Journal Article	Can Vet J	1	6
+17440420	2007-04-19	Journal Article	Crit Care Med	11	14
+17523707	2007-05-26	Journal Article	Clin Drug Investig	8	15
+17544606	2007-06-05	Journal Article	Int J Pharm	7	13
+17586008	2007-06-26	Case Reports	Surg Neurol	4	20
+17587456	2007-06-26	Journal Article	BMC Bioinformatics	2	9
+17628380	2007-07-14	Journal Article	Eur J Radiol	6	13
+17641595	2007-07-21	Other	J Sports Med Phys Fitness	4	21
+17657826	2007-07-28	Journal Article	J Mass Spectrom	4	15
+17672254	2007-08-04	Journal Article	Am J Dent	2	18
+17701923	2007-08-19	Journal Article	Urol J	2	8
+17728231	2007-08-31	Journal Article	J Virol	14	11
+17767352	2007-09-04	Journal Article	ScientificWorldJournal	2	7
+17898079	2007-09-28	Journal Article	Mol Biol Cell	5	11
+17904896	2007-10-02	Journal Article	Int J Med Inform	4	17
+17937394	2007-10-17	Journal Article	Dev Dyn	5	19
+17965385	2007-10-30	Journal Article	J Environ Qual	4	9
+17965807	2007-10-30	Journal Article	Saudi Med J	3	14
+17996547	2007-11-13	Journal Article	J Manipulative Physiol Ther	1	15
+17997533	2007-11-14	Journal Article	J Phys Chem A	5	12
+18018494	2007-11-21	Journal Article	Manag Care	1	27
+18066967	2007-12-11	Journal Article	Int J Toxicol	4	21
+18159047	2007-12-27	Journal Article	JAMA	1	9
+18183732	2008-01-11	Journal Article	Health Care Strateg Manage	1	8
+18200799	2008-01-19	Editorial	Vasc Health Risk Manag	0	22
+18201867	2008-01-19	Case Reports	Reprod Toxicol	5	9
+18208600	2008-01-23	Journal Article	Nutr J	5	37
+18272575	2008-02-15	Journal Article	J Virol	3	11
+18282823	1990-01-01	Journal Article	IEEE Trans Neural Netw	2	4
+18287897	2008-02-22	Journal Article	J Perinat Neonatal Nurs	3	7
+18315777	2008-03-05	Journal Article	J Clin Pharm Ther	4	14
+18338300	2008-03-14	Other	Traffic Inj Prev	3	9
+18369646	2008-03-29	Journal Article	Acta Neuropathol	8	19
+18379390	2008-04-02	Journal Article	Spine	7	12
+18463563	2008-05-09	Journal Article	Molecules	3	3
+18466041	2008-05-10	Journal Article	Environ Toxicol Chem	2	15
+18523552	2008-06-05	Journal Article	PLoS ONE	23	9
+18545245	2008-07-24	Journal Article	Bone Marrow Transplant	6	10
+18545630	2008-06-12	Journal Article	Opt Express	2	14
+18568034	2008-06-24	Journal Article	Nat Med	14	16
+18580710	2008-06-27	Comment	South Med J	1	7
+18604576	2008-07-08	Journal Article	J Ind Microbiol Biotechnol	3	12
+18629303	2008-07-17	Other	Comp Funct Genomics	0	16
+18631660	1980-07-15	Journal Article	Virology	2	14
+18637113	2008-07-19	Journal Article	Eur J Cancer Care (Engl)	2	16
+18667053	2008-08-01	Journal Article	BMC Bioinformatics	5	16
+18694459	2008-08-13	Journal Article	Plant J	5	21
+18703849	2008-08-16	Journal Article	Acta Crystallogr D Biol Crystallogr	2	15
+18726469	2008-08-30	Journal Article	Sci China, C, Life Sci	7	15
+18836848	2008-10-07	Journal Article	J Inherit Metab Dis	1	19
+19007594	2008-11-15	Other	J Am Coll Cardiol	11	8
+19009491	2008-11-15	Comment	Endoscopy	3	8
+19016566	2008-11-20	Journal Article	Electrophoresis	3	14
+19029941	2008-11-26	Journal Article	Oncogene	2	11
+19044222	2008-12-03	Case Reports	Clin EEG Neurosci	4	5
+19090200	2007-09-01	Journal Article	Pak J Biol Sci	2	11
+19093808	1995-01-01	Journal Article	Annu Rev Psychol	3	3
+19105547	2008-12-25	Journal Article	JAAPA	1	8
+19165017	2009-01-24	Case Reports	J Craniofac Surg	3	7
+19233511	2009-02-24	Journal Article	Am J Infect Control	2	9
+19319916	2009-03-26	Journal Article	Small	9	24
+19336740	2009-04-02	Journal Article	Haematologica	8	16
+19379877	2009-04-22	Journal Article	Ann Thorac Surg	6	21
+19394470	2009-04-28	Other	J Am Diet Assoc	4	29
+19427424	2009-05-12	Journal Article	Am J Cardiol	13	17
+19437278	2009-05-14	Journal Article	J Agromedicine	5	9
+19450608	2009-05-20	Journal Article	J Mol Biol	2	8
+19462441	2009-05-23	Journal Article	Int J Cancer	6	22
+19499260	2009-06-06	Journal Article	Environ Sci Pollut Res Int	7	24
+19519962	2009-06-13	Comment	Crit Care	3	19
+19589730	2009-07-11	Journal Article	Clin Immunol	6	14
+19610353	2009-07-21	Journal Article	J Food Prot	3	14
+19620612	2009-07-22	Journal Article	Neurology	8	14
+19637928	2009-07-30	Journal Article	J Am Chem Soc	6	15
+19719025	2009-09-02	Journal Article	Future Child	2	12
+19893659	2008-07-01	Journal Article	Ann Indian Acad Neurol	1	5
+19915730	2009-11-17	Journal Article	Front Behav Neurosci	5	11
+19932864	2009-11-26	Journal Article	Nutr Res	4	19
+19937741	2009-11-26	Journal Article	Dev Psychobiol	3	14
+19956491	2005-04-01	Journal Article	Cancer Res Treat	13	17
+19959598	2009-12-05	Journal Article	Tree Physiol	7	15
+19997333	2009-12-10	Journal Article	Opt Express	8	17
+20042267	2010-01-01	Journal Article	J Environ Manage	5	15
+20308237	2010-03-24	Case Reports	Pract Neurol	5	10
+20361973	2010-04-07	Journal Article	J Insect Physiol	4	14
+20391280	2010-04-15	Journal Article	Teach Learn Med	3	18
+20450306	2010-05-11	Journal Article	Ophthalmic Genet	6	16
+20485213	2010-05-21	Journal Article	J Nurs Adm	1	11
+20556367	2010-06-18	Journal Article	Exp Brain Res	6	15
+20597600	2010-07-06	Journal Article	J Neurosurg	3	9
+20647116	2010-07-22	Journal Article	Otolaryngol Head Neck Surg	5	18
+20655195	2010-07-27	Journal Article	Curr Opin Struct Biol	2	6
+20666234	2010-07-30	Journal Article	IAVI Rep	1	11
+20683192	2010-08-05	Journal Article	Eur J Gastroenterol Hepatol	9	13
+20729809	2010-08-24	Journal Article	EMBO J	2	20
+20827656	2010-09-10	Journal Article	Am J Perinatol	7	6
+20830783	2010-09-11	Journal Article	Anat Rec (Hoboken)	7	18
+20866724	2010-09-28	Journal Article	Phys Rev E Stat Nonlin Soft Matter Phys	2	13
+20941505	2010-10-14	Other	Virchows Arch	10	13
+20957409	2010-10-20	Journal Article	Biometals	9	11
+20976519	2010-10-27	Journal Article	Cell Mol Life Sci	6	15
+20978149	2010-10-28	Journal Article	Clin Cancer Res	13	23
+21045015	2010-11-04	Journal Article	Carcinogenesis	3	17
+21056481	2010-11-09	Journal Article	Arch Gerontol Geriatr	3	17
+21119557	2010-12-02	Other	South Med J	2	16
+21142775	2010-12-15	Other	J Matern Fetal Neonatal Med	6	12
+21175815	2010-12-24	Journal Article	J Gastroenterol Hepatol	11	10
+21179086	2010-12-24	Journal Article	Nature	57	16
+21179894	2010-12-25	Other	J Am Vet Med Assoc	1	18
+21252356	2011-01-22	Journal Article	Int J Soc Psychiatry	5	10
+21316236	2011-02-15	Journal Article	Bioorg Med Chem Lett	6	15
+21321568	2011-02-16	Other	Nat Rev Nephrol	7	12
+21331617	2011-02-19	Journal Article	Heart Vessels	10	13
+21334352	2011-02-22	Journal Article	Physiol Behav	7	20
+21432861	2011-03-25	Clinical Trial	Biomed Chromatogr	6	21
+21454394	2011-04-02	Journal Article	Perit Dial Int	12	21
+21502541	2011-04-20	Journal Article	Blood	9	18
+21650323	1997-10-01	Journal Article	Environ Sci Technol	0	12
+21688328	2011-06-21	Journal Article	Chirality	4	15
+21699293	2011-06-28	Journal Article	Phys Rev Lett	4	10
+21702401	2011-06-28	Comment	J Support Oncol	1	7
+21716987	2011-07-01	Case Reports	Quintessence Int	6	17
+21720548	2011-07-02	Journal Article	PLoS ONE	7	8
+21782808	2011-07-26	Clinical Trial	Clin Biochem	5	18
+21787396	2011-07-27	Other	Ital J Pediatr	6	12
+21807271	2011-08-03	Other	JEMS	0	2
+21809733	2011-08-04	Other	Isr Med Assoc J	6	15
+21822225	2011-08-09	Other	Nat Biotechnol	1	9
+21826275	2011-08-10	Journal Article	ISRN Obstet Gynecol	7	33
+21953818	2011-09-29	Journal Article	Angew Chem Int Ed Engl	6	10
+21955614	2011-10-01	Journal Article	Cancer Lett	7	17
+21963650	2011-10-04	Journal Article	Exp Neurol	5	13
+21998787	2010-07-01	Journal Article	J Dent (Tehran)	3	22
+22003277	2011-10-18	Journal Article	J Child Fam Stud	2	21
+22072743	2011-11-11	Journal Article	J Clin Endocrinol Metab	15	16
+22091669	2011-11-19	Journal Article	Neural Comput	2	8
+22186232	2011-12-22	Journal Article	DNA Repair (Amst)	5	11
+22192721	2012-01-04	Journal Article	J Am Coll Cardiol	3	17
+22194315	2011-12-24	Other	Trends Amplif	6	32
+22198348	2011-12-27	Journal Article	Biotechnol Lett	6	16
+22247807	2012-01-17	Journal Article	J Gynecol Oncol	5	13
+22271062	2012-01-25	Case Reports	Eur Child Adolesc Psychiatry	3	15
+22272023	2010-09-01	Journal Article	J Toxicol Pathol	5	16
+22352749	2012-02-23	Journal Article	Curr Pharm Des	6	5
+22365704	2012-03-01	Journal Article	Theriogenology	5	16
+22408581	2012-03-13	Journal Article	Int J Environ Res Public Health	4	18
+22438889	2012-03-23	Other	PLoS ONE	3	17
+22460680	2012-03-31	Journal Article	Ophthalmic Plast Reconstr Surg	4	8
+22492219	2012-04-12	Other	J Gastroenterol	1	7
+22495610	2012-04-13	Journal Article	Hypertens Res	9	15
+22544261	2012-05-01	Journal Article	Appl Environ Microbiol	8	16
+22549919	2012-05-03	Journal Article	Small	7	14
+22579994	2012-05-15	Journal Article	Food Chem Toxicol	5	23
+22645164	2012-05-31	Other	Pers Soc Psychol Bull	2	6
+22719354	2012-06-22	Journal Article	Acta Crystallogr Sect E Struct Rep Online	3	15
+22723860	2012-06-23	Journal Article	PLoS ONE	2	9
+22739443	2012-06-29	Journal Article	Virology	3	16
+22766250	2012-07-07	Journal Article	Clin Exp Rheumatol	6	16
+22843567	2012-07-31	Journal Article	Toxicol Sci	8	21
+22857270	2012-08-04	Other	J Aerosol Med Pulm Drug Deliv	5	28
+22884624	2012-08-14	Other	Neuropharmacology	9	25
+22915428	2012-08-24	Journal Article	AJR Am J Roentgenol	7	18
+22943243	2012-09-05	Journal Article	Ann R Coll Surg Engl	2	6
+22960305	2012-09-11	Journal Article	Toxicol Lett	6	16
+23006910	2012-09-26	Journal Article	Technol Health Care	5	12
+23020724	2012-10-02	Journal Article	Arch Pathol Lab Med	1	9
+23045633	2012-10-10	Journal Article	Proc Natl Acad Sci USA	2	5
+23077749	2012-10-19	Journal Article	Cardiovasc J Afr	1	14
+23118344	2012-11-03	Editorial	Heart	6	12
+23142549	2012-11-13	Journal Article	Exp Parasitol	6	16
+23144537	2012-11-13	Journal Article	Appl Phys B	9	21
+23150567	2012-11-15	Journal Article	Proc Natl Acad Sci USA	2	14
+23172341	2012-11-28	Journal Article	Sex Transm Infect	3	18
+23202805	2012-12-04	Journal Article	Lab Chip	3	16
+23206929	2012-12-05	Journal Article	Exp Eye Res	6	20
+23219373	2012-12-12	Other	Eur Urol	3	41
+23323171	2013-01-17	Case Reports	J Korean Neurosurg Soc	4	10
+23333566	2013-01-22	Journal Article	Exp Neurol	4	25
+23341554	2013-01-24	Other	Proc Natl Acad Sci USA	1	5
+23347861	2013-01-26	Journal Article	JACC Cardiovasc Interv	11	18
+23363597	2013-02-01	Journal Article	Mol Biol Cell	8	15
+23372769	2013-02-02	Journal Article	PLoS ONE	8	13
+23375714	2013-02-05	Journal Article	J Electromyogr Kinesiol	4	22
+23407681	2009-07-01	Journal Article	Avicenna J Med Biotechnol	9	12
+23417294	2013-02-19	Journal Article	Laryngoscope	7	10
+23418187	2013-02-19	Journal Article	Bioinformatics	4	14
+23431937	2013-02-26	Journal Article	Nurs Stand	1	8
+23473006	2013-03-12	Journal Article	J Neurosurg Pediatr	12	7
+23485230	2013-03-15	Clinical Trial	Eur J Cancer	7	37
+23489284	2013-03-16	Journal Article	Health Soc Care Community	7	19
+23497159	2013-03-19	Other	BMC Plant Biol	7	30
+23506081	2013-03-20	Journal Article	Nano Lett	7	18
+23530067	2013-03-27	Journal Article	J Cell Biol	2	11
+23550838	2013-04-05	Other	Transfusion	7	13
+23551138	2013-04-05	Journal Article	Eur J Neurosci	3	18
+23605267	2005-06-01	Journal Article	Mycotoxin Res	2	13
+23668989	2013-05-15	Other	Bioorg Med Chem Lett	11	11
+23686631	2013-05-21	Journal Article	Acta Neurochir (Wien)	4	11
+23715037	2013-05-30	Journal Article	J Antibiot	12	12
+23755137	2013-06-12	Journal Article	PLoS ONE	5	20
+23759360	2013-06-14	Journal Article	Eur J Oncol Nurs	3	16
+23831073	2013-07-09	Journal Article	Urology	5	16
+23891596	2013-07-31	Journal Article	Am J Emerg Med	6	15
+23965500	2010-05-01	Journal Article	Int J Pharm Compd	1	14
+23991618	2013-09-03	Journal Article	J Proteome Res	5	15
+23997264	2013-09-03	Journal Article	Can Vet J	3	13
+23998237	2013-09-04	Journal Article	Allergy Asthma Proc	6	8
+24011373	2013-09-10	Journal Article	MSMR	1	12
+24020586	2013-09-12	Journal Article	Tissue Eng Part A	3	22
+24030098	2013-09-14	Clinical Trial	Ann Oncol	11	18
+24030176	2013-09-14	Other	Neurosurgery	2	2
+24046264	2013-09-21	Clinical Trial	Behav Res Methods	2	9
+24062347	2013-09-26	Journal Article	Neurology	2	6
+24101971	2013-10-09	Journal Article	Chem Sci	2	21
+24121054	2013-10-15	Journal Article	Toxicol Appl Pharmacol	2	10
+24138608	2013-10-22	Journal Article	Health Serv Res	10	10
+24174586	2013-11-01	Journal Article	Neurology	12	11
+24227626	2013-11-15	Journal Article	Catheter Cardiovasc Interv	10	28
+24244117	2013-11-19	Journal Article	PLoS Comput Biol	6	16
+24250114	2013-11-20	Journal Article	Bioinformation	2	14
+24251251	2013-11-20	Journal Article	J Clin Neonatol	1	9
+24254858	1996-06-01	Journal Article	J Prim Prev	2	8
+24267444	2013-11-26	Journal Article	Prog Cardiovasc Dis	1	16
+24278535	2010-12-01	Journal Article	Toxicol Res	4	11
+24311212	1994-04-01	Journal Article	Photosyn Res	3	13
+24317671	1979-01-01	Journal Article	Planta	3	18
+24324097	2013-12-11	Journal Article	Anticancer Res	5	9
+24332882	2013-12-18	Journal Article	Tuberculosis (Edinb)	8	14
+24446674	2014-01-23	Journal Article	Anal Chem	2	14
+24456351	2014-01-25	Journal Article	J Med Food	2	19
+24512244	2014-02-12	Clinical Trial	Emotion	3	22
+24520586	2014-02-14	Other	Pract Midwife	0	9
+24593454	2014-03-07	Journal Article	Rev Sci Instrum	5	18
+24594683	2014-03-07	Journal Article	PLoS ONE	4	15
+24625344	2014-03-15	Other	BMC Geriatr	7	23
+24627970	2014-03-19	Journal Article	Hereditas	11	13
+24664276	2014-03-26	Journal Article	Circulation	31	17
+24694737	2014-04-04	Other	Eur J Gastroenterol Hepatol	1	14
+24723143	2014-04-12	Other	Clin Orthop Relat Res	1	12
+24728008	2014-04-15	Journal Article	PLoS ONE	9	15
+24748998	2012-10-12	Journal Article	Rep U S	7	16
+24765041	2014-04-26	Journal Article	Acta Crystallogr Sect E Struct Rep Online	2	7
+24807988	2014-05-09	Journal Article	IEEE Comput Graph Appl	1	8
+24837112	2014-05-20	Journal Article	Am J Infect Control	17	23
+24850305	2014-05-23	Journal Article	Acta Biochim Biophys Sin (Shanghai)	12	15
+24887875	2014-06-03	Case Reports	Asian Cardiovasc Thorac Ann	5	10
+24915097	2014-06-11	Journal Article	Acta Crystallogr F Struct Biol Commun	8	14
+25014402	2014-07-12	Journal Article	J Biotechnol	8	17
+25039797	2014-07-22	Journal Article	J Neuroendocrinol	3	13
+25053093	2014-07-24	Journal Article	Food Chem	6	12
+25055715	2014-07-25	Journal Article	J Otolaryngol Head Neck Surg	4	15
+25076564	2014-08-01	Other	Can Nurse	0	4
+25086852	2014-08-05	Journal Article	Radiother Oncol	5	13
+25097568	2014-08-07	Journal Article	Arch Med Sci	8	27
+25129766	2014-08-19	Journal Article	Carbohydr Polym	3	12
+25141147	2014-08-21	Journal Article	Am Nat	2	13
+25151370	2014-08-26	Journal Article	J Mol Histol	8	16
+25172670	2014-08-31	Clinical Trial	Cont Lens Anterior Eye	6	12
+25202411	2014-09-10	Journal Article	Oncol Lett	9	8
+25225449	2014-09-17	Journal Article	Am J Health Syst Pharm	5	16
+25259963	2014-09-27	Journal Article	Phys Rev Lett	4	10
+25263250	2014-09-30	Journal Article	Langmuir	11	8
+25306494	2014-10-13	Journal Article	J Shoulder Elbow Surg	3	10
+25328233	2014-10-21	Journal Article	J Food Sci Technol	6	16
+25374173	2014-11-07	Other	Asian Pac J Cancer Prev	7	21
+25408779	2014-11-20	Journal Article	Open Orthop J	6	30
+25413334	2014-11-22	Editorial	Expert Rev Anti Infect Ther	1	8
+25423613	2014-11-26	Journal Article	ACS Appl Mater Interfaces	7	22
+25472941	2014-12-05	Journal Article	Biol Lett	2	10
+25480677	2014-12-07	Journal Article	Eur J Radiol	5	10
+25514693	2014-12-17	Other	J Addict Nurs	2	18
+25537649	2014-12-30	Journal Article	J Am Geriatr Soc	17	12
+25574284	2015-01-13	Journal Article	J Microbiol Biol Educ	1	11
+25628511	2015-01-30	Journal Article	Environ Health Insights	5	10
+25652481	2015-02-06	Journal Article	Med Phys	6	11
+25687847	2015-02-18	Case Reports	Cancer Res Treat	10	12
+25704481	2015-02-24	Journal Article	Anat Rec (Hoboken)	1	16
+25708086	2015-02-25	Journal Article	Cutan Ocul Toxicol	10	21
+25792612	2015-03-21	Editorial	J R Soc Med	3	19
+25832793	2015-04-04	Journal Article	BMJ	1	5
+25834452	2015-04-04	Journal Article	Neuropsychiatr Dis Treat	3	6
+25856317	2015-04-10	Other	PLoS ONE	1	11
+25875442	2015-04-16	Journal Article	PLoS ONE	4	16
+25910287	2015-04-25	Journal Article	Turk J Gastroenterol	5	9
+25945546	2015-05-07	Case Reports	JAMA Surg	2	4
+25954015	2015-05-09	Journal Article	Blood	7	15
+25977020	2015-05-16	Journal Article	Food Chem	5	14
+26009891	2015-05-27	Journal Article	PLoS ONE	7	18
+26023630	2015-05-30	Case Reports	J Clin Diagn Res	5	11
+26025636	2015-05-31	Journal Article	Biochim Biophys Acta	4	11
+26046089	2015-06-06	Journal Article	Ann Transl Med	1	14
+26052247	2015-06-09	Journal Article	Mol Breed	8	17
+26101623	2014-01-01	Journal Article	J Nutr Sci	8	17
+26110796	2015-06-26	Journal Article	Curr Opin Neurol	1	5
+26114556	2015-06-27	Clinical Trial	PLoS ONE	7	25
+26125107	2015-07-01	Other	Can J Gastroenterol Hepatol	5	17
+26156941	2015-07-15	Journal Article	Scand J Public Health	6	16
+26185175	2015-07-18	Journal Article	BMJ Open	5	18
+26192587	2015-07-21	Journal Article	Ann Intern Med	1	18
+26206743	2015-07-25	Other	BMJ	1	4
+26233740	2015-08-04	Journal Article	Environ Sci Pollut Res Int	3	15
+26237009	2015-08-04	Journal Article	Curr Protoc Immunol	4	10
+26257243	2015-08-11	Journal Article	Biol Psychiatry	2	17
+26282158	2015-08-19	Journal Article	J Allergy Clin Immunol Pract	3	11
+26296217	2015-08-22	Journal Article	J Pediatr Orthop	4	15
+26369667	2015-09-16	Journal Article	J Intellect Disabil Res	5	17
+26457201	2015-10-13	Journal Article	Int J Nephrol	2	11
+26515895	2015-10-31	Journal Article	Sci Rep	3	14
+26594391	2015-11-26	Journal Article	Acta Crystallogr E Crystallogr Commun	5	18
+26597635	2015-11-26	Case Reports	J Hosp Infect	10	20
+26630863	2015-12-04	Case Reports	Dent Update	3	15
+26639892	2015-12-08	Case Reports	Am J Med Genet A	6	9
+26652085	2015-12-15	Journal Article	Glob J Health Sci	5	9
+26686816	2015-12-22	Journal Article	J Acad Nutr Diet	5	12
+26917252	2016-02-27	Journal Article	Trends Biotechnol	5	10
+26917982	2016-02-27	Journal Article	Clin Med Insights Cardiol	2	17
+26926754	2016-03-02	Journal Article	Mil Med	8	18
+26943477	2016-03-05	Journal Article	Eur J Obstet Gynecol Reprod Biol	3	13
+26958504	2016-03-10	Journal Article	Transl Lung Cancer Res	3	18
+26970786	2016-03-15	Journal Article	Acta Chim Slov	6	16
+27010090	2016-03-25	Journal Article	J Occup Health	6	18
+27039946	2016-04-05	Journal Article	Circ J	4	10
+27062441	2016-04-12	Editorial	FEBS J	6	15
+27117871	2016-04-28	Journal Article	Brain Res	5	7
+27179428	2016-05-18	Journal Article	Chemosphere	2	15
+27191345	2016-05-19	Journal Article	Clin Exp Rheumatol	5	17
+27295983	2016-06-15	Journal Article	BMC Cardiovasc Disord	1	13
+27332567	2016-06-23	Journal Article	Nurs Stand	1	9
+27340786	2016-06-25	Journal Article	Aquat Toxicol	6	7
+27358527	2016-07-01	Journal Article	Indian J Surg	1	7
+27377552	2016-07-06	Journal Article	Sci Rep	5	12
+27415561	1988-02-06	Journal Article	Nurs Stand	0	2
+27431705	1983-06-01	Journal Article	Phys Sportsmed	0	2
+27435851	2016-07-21	Case Reports	BMJ Case Rep	5	12
+27441370	2016-07-22	Journal Article	Skin Pharmacol Physiol	4	12
+27482514	2016-08-03	Journal Article	Germs	5	12
+27519006	2016-08-16	Journal Article	J Proteome Res	6	7
+27520896	2016-08-16	Case Reports	Asian J Psychiatr	2	12
+27546492	2016-08-23	Journal Article	Semin Arthritis Rheum	5	17
+27582383	2016-09-02	Other	Injury	8	12
+27587816	2016-09-03	Journal Article	Genome Announc	9	13
+27635104	2016-09-17	Journal Article	Water Resour Res	4	11
+27665473	2016-09-26	Journal Article	Biomed Pharmacother	9	14
+27720739	2016-10-11	Case Reports	Gastroenterology	3	5
+27736451	2009-02-10	Journal Article	Nurs Manag (Harrow)	1	2
+27755121	2016-10-21	Journal Article	Curr Opin Rheumatol	2	5
+27777276	2016-10-26	Journal Article	Am J Med Qual	10	19
+27802164	2016-11-02	Journal Article	J Cell Sci	5	10
+27831577	2016-11-11	Journal Article	Chem Commun (Camb)	9	19
+27864784	2016-11-20	Journal Article	J Gen Intern Med	1	17
+27894677	2016-11-30	Journal Article	J Hand Ther	4	9
+27965769	2016-12-15	Journal Article	Asthma Res Pract	7	13
+27984180	2016-12-17	Journal Article	Neuroscience	3	18
+28069278	2017-01-11	Journal Article	Mar Pollut Bull	2	11
+28088222	2017-01-16	Journal Article	BMC Psychiatry	5	10
+28106362	2017-01-21	Journal Article	ACS Appl Mater Interfaces	9	19
+28145369	1987-09-01	Journal Article	Indian J Dermatol Venereol Leprol	2	7
+28236324	2017-02-27	Editorial	Plant Cell Environ	2	14
+28259056	2017-03-05	Journal Article	J Inorg Biochem	6	16
+28270675	2017-03-09	Case Reports	Am J Gastroenterol	5	10
+28273114	2017-03-09	Journal Article	PLoS ONE	4	16
+28458078	2017-05-02	Journal Article	J Adolesc	4	18
+28462268	2015-10-26	Journal Article	Health Serv Res Manag Epidemiol	5	14
+28492231	2017-05-12	Journal Article	Nat Commun	8	12
+28495770	2017-05-13	Journal Article	Genome Announc	3	11
+28530471	2017-05-23	Journal Article	J Dent Res	6	7
+28531280	2017-05-23	Journal Article	J Gerontol A Biol Sci Med Sci	5	26
+28559511	2017-06-01	Other	Int J Mycobacteriol	5	23
+28587798	2017-06-08	Journal Article	Eur J Vasc Endovasc Surg	1	15
+28635207	2017-06-22	Journal Article	Monaldi Arch Chest Dis	16	8
+28658199	2017-06-29	Journal Article	Transplantation	11	11
+28658551	2017-06-29	Journal Article	Immunol Rev	5	9
+28682955	2017-07-07	Journal Article	Anesth Analg	5	18
+28719765	2017-07-19	Journal Article	Appl Physiol Nutr Metab	4	17
+28742781	2017-07-26	Other	Anesth Analg	2	6
+28751307	2017-07-29	Journal Article	Biol Open	5	16
+28754541	2017-07-30	Journal Article	Fitoterapia	11	9
+28787353	2017-08-09	Journal Article	J Cardiopulm Rehabil Prev	6	19
+28827922	2017-08-23	Editorial	Indian J Palliat Care	1	8
+28877861	2017-09-08	Journal Article	JMIR Ment Health	5	27
+28899103	2017-09-14	Journal Article	Antioxid Redox Signal	5	12
+28915966	2017-09-17	Journal Article	Med Hypotheses	2	14
+28930921	2017-09-21	Editorial	Pain	1	9
+29047097	2017-10-20	Journal Article	Adv Exp Med Biol	1	7
+29069322	2017-10-27	Journal Article	J Chromatogr Sci	7	22
+29105524	2017-11-07	Case Reports	Gynecol Endocrinol	6	21
+29208044	2017-12-07	Journal Article	BMC Res Notes	5	16
+29280494	2017-12-28	Journal Article	J Physiol (Lond)	7	18
+29296438	2016-01-01	Journal Article	J Radiosurg SBRT	9	13
+29341983	2018-01-18	Journal Article	Pediatr Infect Dis J	9	18
+29345149	2018-01-19	Journal Article	Future Oncol	2	13
+29350774	2018-01-20	Journal Article	Hepatology	16	21
+29350960	2018-01-20	Journal Article	Phys Rev Lett	3	13
+29394406	2018-02-03	Editorial	Rheumatology (Oxford)	4	13
+29401244	2018-02-06	Journal Article	Int Health	15	9
+29423665	2018-02-10	Journal Article	Psychiatr Q	3	25
+29461711	2016-05-01	Journal Article	Can J Cardiovasc Nurs	6	20
+29465510	2018-02-22	Journal Article	J Occup Environ Med	7	10
+29500184	2018-03-04	Journal Article	Gut	22	11
+29519842	2018-03-10	Journal Article	Genome Announc	10	21
+29524801	2018-03-11	Journal Article	Plant Physiol Biochem	5	25
+29529159	2018-03-13	Journal Article	Am J Clin Nutr	7	13
+29532347	2018-03-14	Journal Article	Acta Biotheor	2	15
+29547905	2018-03-17	Journal Article	J Econ Entomol	4	12
+29548159	2018-03-20	Journal Article	Phys Rev E	1	15
+29607839	2018-04-03	Journal Article	J Indian Soc Pedod Prev Dent	4	18
+29690420	2018-04-25	Journal Article	Zootaxa	3	16
+29736195	2018-05-08	Journal Article	Can Respir J	3	19
+29737264	2018-05-09	Journal Article	Infect Disord Drug Targets	3	11
+29856383	2018-06-02	Journal Article	Opt Lett	4	10
+29857384	2018-06-03	Journal Article	Stud Health Technol Inform	5	9
+29857802	2018-06-03	Journal Article	Stud Hist Philos Sci	1	11
+29860293	2018-06-04	Other	Clin Infect Dis	1	20
+29899189	2018-06-15	Journal Article	Biomed Res	7	18
+29901099	2018-06-15	Journal Article	Mol Med Rep	10	12
+29912989	2018-06-19	Journal Article	PLoS ONE	10	12
+29917075	2018-06-20	Journal Article	Hum Mol Genet	15	16
+29928210	2018-06-22	Case Reports	Case Rep Oncol	6	15
+29934085	2018-06-24	Journal Article	J Hand Surg Am	9	17
+29995654	2018-07-12	Journal Article	J Pediatr Orthop B	1	24
+30002663	2018-07-14	Journal Article	Front Plant Sci	10	19
+30056223	2018-07-30	Journal Article	Acad Pediatr	10	14
+30085162	2018-08-08	Journal Article	J Infect Dis	8	25
+30090149	2018-08-10	Case Reports	J Pediatr Neurosci	4	13
+30151607	2018-08-29	Journal Article	Health Econ Rev	7	18
+30165932	2018-09-01	Journal Article	J Biomed Nanotechnol	12	16
+30176273	2018-09-04	Clinical Trial	Resuscitation	8	15
+30180715	2018-09-06	Journal Article	J Acoust Soc Am	5	25
+30248867	2018-09-27	Journal Article	Sci Total Environ	3	14
+30299394	2018-10-10	Journal Article	J Strength Cond Res	5	22
+30299965	2018-10-10	Other	Mol Pharm	6	18
+30344167	2018-10-23	Journal Article	BMJ Open	5	14
+30351222	2018-10-24	Journal Article	Tissue Eng Part A	11	10
+30351740	2017-05-01	Case Reports	J Ark Med Soc	1	11
+30411101	2018-11-10	Journal Article	Phys Chem Chem Phys	3	15
+30485479	2018-11-30	Journal Article	Stat Med	3	9
+30514826	2018-12-06	Journal Article	Biosci Rep	7	15
+30536301	2018-12-12	Journal Article	Eur Rev Med Pharmacol Sci	7	11
+30582410	2018-12-26	Journal Article	Epigenetics	7	18
+30602218	2019-01-04	Journal Article	Gut Liver	7	18
+30620310	2019-01-09	Journal Article	Manag Care	1	13
+30686336	2019-01-29	Journal Article	J Vasc Surg	9	21
+30691903	2019-01-30	Journal Article	Waste Manag	5	14
+30710658	2019-02-03	Journal Article	Diabetes Res Clin Pract	10	15
+30784251	2019-02-21	Journal Article	Minerva Med	6	15
+30793300	2019-02-23	Journal Article	J Cell Physiol	14	9
+30805225	2019-02-26	Case Reports	Case Rep Endocrinol	3	17
+30810703	2019-02-28	Journal Article	JAMA Cardiol	22	20
+30827479	2019-03-05	Journal Article	Biol Psychiatry Cogn Neurosci Neuroimaging	1	11
+30850249	2019-03-10	Journal Article	Am J Infect Control	7	21
+30856562	2019-03-12	Journal Article	Ecotoxicol Environ Saf	7	17
+30877734	2019-03-17	Journal Article	Hell J Nucl Med	3	16
+30881633	2019-03-19	Journal Article	Chem Sci	2	11
+30891499	2019-03-21	Journal Article	Sci Adv	8	12
+30913165	2019-03-27	Journal Article	Pain	8	15
+30913646	1983-05-01	Journal Article	J Food Prot	3	9
+31036416	2019-05-01	Journal Article	Am J Otolaryngol	6	22
+31042058	2019-05-02	Journal Article	Am J Physiol Renal Physiol	8	20
+31050915	2019-05-06	Journal Article	J Dent Res	8	13
+31064299	2019-05-09	Journal Article	Proc Biol Sci	2	15
+31101865	2019-05-19	Journal Article	Nat Rev Cancer	3	12
+31112217	2016-06-15	Journal Article	Clin Infect Dis	0	9
+31112439	2019-05-22	Journal Article	Annu Rev Microbiol	2	9
+31127067	2019-05-28	Journal Article	BMJ Qual Saf	6	17
+31155176	2019-06-04	Journal Article	Transplant Proc	4	17
+31160171	2019-06-05	Journal Article	Clin Breast Cancer	24	15
+31190306	2019-06-14	Journal Article	AMB Express	6	11
+31244524	2019-06-28	Journal Article	Int J Tryptophan Res	2	23
+31264743	2019-07-03	Editorial	NMR Biomed	1	4
+31268350	2019-07-04	Journal Article	Comput Methods Biomech Biomed Engin	6	10
+31270405	2019-07-05	Journal Article	Bone Marrow Transplant	0	17
+31297577	2019-07-13	Journal Article	Knee Surg Sports Traumatol Arthrosc	9	19
+31310190	2019-07-17	Journal Article	Int J Syst Evol Microbiol	4	16
+31313901	2019-07-18	Journal Article	ACS Appl Mater Interfaces	5	17
+31341926	2019-07-26	Journal Article	ACG Case Rep J	1	6
+31342064	2019-07-26	Journal Article	Neurosurgery	13	15
+31346389	2019-07-28	Journal Article	J Med Ethics Hist Med	2	17
+31392427	2019-08-09	Journal Article	Mikrochim Acta	7	20
+31449329	2019-08-27	Journal Article	Acta Obstet Gynecol Scand	4	7
+31450747	2019-08-28	Journal Article	Cancers (Basel)	9	23
+31599624	2019-10-11	Journal Article	J Exp Psychol Learn Mem Cogn	3	11
+31615863	2019-10-17	Journal Article	Cold Spring Harb Perspect Med	4	5
+31639703	2019-10-23	Journal Article	J Appl Lab Med	6	8
+31690280	2019-11-07	Other	BMC Fam Pract	9	17
+31711704	2019-11-13	Journal Article	Theriogenology	7	18
+31794434	2019-12-04	Journal Article	J Clin Invest	10	12
