@@ -2,7 +2,7 @@
 
 R code to read and analyse data to examine the use of acronyms in published papers over time. The analysis examines titles and abstracts published on [_PubMed_](https://pubmed.ncbi.nlm.nih.gov/) up until 2019. Our definition of acronym includes initialisms and abbreviations.
 
-The folder `animation` contains animations of the top 20 acronyms per year over time in titles and abstracts.
+The folder `animation` contains animations of the top ten acronyms per year over time in titles and abstracts.
 
 The folder `data` contains the following data on acronyms and the meta-data on papers:
 * `titles[x].rds` meta-data on the 24,873,372 included titles in rds format
