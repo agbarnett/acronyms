@@ -49,8 +49,8 @@ to.plot = filter(all.trends,
 #                 exclude == 'None',
 #                 journals == 'Proc Natl Acad Sci USA' 
 #                 journals == 'PLoS ONE' 
-                 journals == 'Nature' 
-#                 journals == 'alljournals'
+#                 journals == 'Nature' 
+                 journals == 'alljournals'
                  ) %>%
   mutate(facet = ifelse(only.letters == TRUE, 'Letters only', 'Letters and/or numbers'))
 
