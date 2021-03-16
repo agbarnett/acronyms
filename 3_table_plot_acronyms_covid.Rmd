@@ -1,0 +1,114 @@
+---
+title: "Update of acronym counts post-COVID"
+author: "Adrian Barnett"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE, error=FALSE, comment='', dpi=400)
+options(width=1000) # Wide pages
+options(scipen=999) # avoid scientific presentation
+
+library(flextable)
+library(ggplot2)
+library(dplyr)
+
+# get the data of yearly counts from lyra
+load("//hpc-fs/barnetta/acronym/data/topten.RData") # from Z:/acronyms/3_count_top_ten.R
+# narrow down to top five
+top_five_titles = filter(top.ten.titles, year>=2019, year<=2020) %>%
+  group_by(year) %>%
+  mutate(rank = rank(n)) %>%
+  filter(rank>=6) %>%
+  ungroup() %>%
+  mutate(rank = rank - 5) # rank order for plot
+top_five_abstracts = filter(top.ten.abstracts, year>=2019, year<=2020) %>%
+  group_by(year) %>%
+  mutate(rank = rank(n)) %>%
+  filter(rank>=6) %>%
+  ungroup() %>%
+  mutate(rank = rank - 5) # rank order for plot
+```
+
+
+# Change in top five acronyms from 2019 to 2020
+
+### Table of titles
+
+```{r}
+to_table = select(top_five_titles, -rank, -source)
+ftab = flextable(to_table) %>%
+  theme_box() %>%
+  flextable::merge_v(j=1) %>%
+  autofit()
+ftab
+```
+
+### Table of abstracts
+
+```{r}
+to_table = select(top_five_abstracts, -rank, -source)
+ftab = flextable(to_table) %>%
+  theme_box() %>%
+  flextable::merge_v(j=1) %>%
+  autofit()
+ftab
+```
+
+### Plot of titles
+
+```{r}
+labels = arrange(top_five_titles, year, n) %>% pull(acronyms) # ordered labels
+to_plot_title = mutate(top_five_titles, 
+                       xaxis = ifelse(year==2020, rank+5, rank)) 
+gplot = ggplot(data=to_plot_title, aes(x=xaxis, y=n, fill=acronyms))+
+  geom_bar(stat='identity')+
+  scale_x_continuous(breaks=1:10, labels=labels)+
+  theme_bw()+
+  xlab('')+
+  ylab('Number')+
+  facet_wrap(~year, scales='free_y')+
+  coord_flip()+
+  theme(legend.position = 'none',
+        panel.grid.minor = element_blank())
+gplot
+# export
+```
+
+### Plot of abstracts
+
+```{r}
+labels = arrange(top_five_abstracts, year, n) %>% pull(acronyms) # ordered labels
+to_plot_abstract = mutate(top_five_abstracts, 
+                       xaxis = ifelse(year==2020, rank+5, rank)) 
+gplot = ggplot(data=to_plot_abstract, aes(x=xaxis, y=n, fill=acronyms))+
+  geom_bar(stat='identity')+
+  scale_x_continuous(breaks=1:10, labels=labels)+
+  theme_bw()+
+  xlab('')+
+  ylab('Number')+
+  facet_wrap(~year, scales='free_y')+
+  coord_flip()+
+  theme(legend.position = 'none',
+        panel.grid.minor = element_blank())
+gplot
+# export
+```
+
+## All time acronyms (top 20)
+
+```{r}
+load("//hpc-fs/barnetta/acronym/data/for.analysis.RData") # 
+all_time = group_by(acronyms, source, acronyms) %>%
+  tally()
+top_ten = group_by(all_time, source ) %>%
+  arrange(-n) %>%
+  slice_head(n=20)
+ftab = flextable(top_ten) %>%
+  theme_box() %>%
+  autofit() %>%
+  colformat_num(j=3, big.mark=',', digits=0) %>%
+  merge_v(j=1)
+ftab
+```
